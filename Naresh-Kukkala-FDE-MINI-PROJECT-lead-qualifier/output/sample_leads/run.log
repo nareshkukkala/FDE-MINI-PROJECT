@@ -1,0 +1,5 @@
+2026-10-25 05:12:39,266 INFO    lead_qualifier.ingest: Loaded 49 leads from data/leads.csv (7 with data issues)
+2026-10-25 05:12:39,266 INFO    lead_qualifier.pipeline: Analysis date (as_of) = 2024-01-20
+2026-10-25 05:12:39,267 INFO    lead_qualifier.pipeline: LLM batch 1/3 (20 leads)
+2026-10-25 05:12:39,268 INFO    lead_qualifier.pipeline: LLM batch 2/3 (20 leads)
+2026-10-25 05:12:39,269 INFO    lead_qualifier.pipeline: LLM batch 3/3 (2 leads)

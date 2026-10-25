@@ -1,0 +1,78 @@
+# Lead Intelligence System — configuration
+# API keys are NEVER stored here. Set them as environment variables:
+#   ANTHROPIC_API_KEY | OPENAI_API_KEY | GROQ_API_KEY | GEMINI_API_KEY
+
+# Who we are (used to keep outreach on-brand). Assumption: the client is a
+# mid-market SaaS company selling a revenue-operations / lead-routing platform.
+company:
+  product_name: "FlowPilot"
+  one_liner: "a revenue-operations platform that scores, routes and follows up on inbound leads automatically"
+  proof_point: "teams typically cut lead response time from days to minutes"
+  sender_name: "Priya Nair"
+  sender_title: "Account Executive, FlowPilot"
+  tone: "warm, concise, consultative; no hype, no exclamation marks, no invented statistics"
+
+llm:
+  provider: anthropic       # anthropic | openai | groq | gemini | mock (offline, no key)
+  models:
+    anthropic: "claude-haiku-4-5"
+    openai: "gpt-4o-mini"
+    groq: "llama-3.3-70b-versatile"
+    gemini: "gemini-2.0-flash"
+    mock: "mock-deterministic"
+  batch_size: 20            # leads per API call (never one call per lead)
+  temperature: 0.3
+  max_output_tokens: 8000
+  timeout_seconds: 90
+  max_retries: 4            # per batch, for 429 / 5xx / timeouts / malformed JSON
+  backoff_base_seconds: 2   # exponential: 2, 4, 8, 16 (+ jitter), honours Retry-After
+  requests_per_minute: 20   # client-side throttle (Groq free tier ~30 RPM)
+  circuit_breaker_failures: 3   # consecutive failed batches -> stop calling, use fallback
+
+rubric:
+  # "auto" = latest interaction date in the file (the data is a Jan-2024 snapshot;
+  # measuring against today would mark every lead as stale). Or set "YYYY-MM-DD".
+  as_of_date: auto
+
+  thresholds:
+    qualified_min: 7.5      # score >= 7.5 -> QUALIFIED
+    rejected_below: 6.5     # score <  6.5 -> REJECTED ; 6.5-7.4 -> REVIEW (too close to call)
+    p1_min: 9.0             # qualified & score >= 9.0 -> P1 (contact within 24h)
+
+  knockouts:
+    min_company_size: 10    # < 10 employees: no RevOps function to buy -> reject
+    max_days_since_interaction: 365   # > 1 year: stale, hand to nurture -> reject
+
+  # Factor 1 — Company size fit (max 2.5). Ranges inclusive.
+  size_bands:
+    - {min: 1,    max: 9,       points: 0.0, label: "micro (<10)"}
+    - {min: 10,   max: 49,      points: 1.25, label: "small (10-49)"}
+    - {min: 50,   max: 1000,    points: 2.5, label: "core mid-market (50-1000)"}
+    - {min: 1001, max: 5000,    points: 1.75, label: "upper mid-market (1001-5000)"}
+    - {min: 5001, max: 10000000, points: 0.75, label: "enterprise (5000+), long procurement"}
+
+  # Factor 2 — Industry fit (max 2.5). Unlisted industries are classified by the LLM.
+  industry_tiers:
+    core:        {points: 2.5, industries: [SaaS, Software, Enterprise Software, Technology, FinTech, InsurTech, HealthTech, HR Tech, AI/ML, Cybersecurity, Analytics, EdTech, Climate Tech, Telecom]}
+    adjacent:    {points: 1.5, industries: [Finance, Insurance, Healthcare, Logistics, Supply Chain, Retail, Manufacturing, Marketing, Consulting, Business Services, Services, Real Estate, Media, Energy, Pharmaceuticals, Biotech, Automotive, Education, Legal, Trade, Construction, Environmental, Cryptocurrency, Consumer Services]}
+    low:         {points: 0.5, industries: [Hospitality, Events, Agriculture, NonProfit, Government, Cultural, Sports, Travel, Entertainment, Consumer]}
+
+  # Factor 3 — Source / buying intent (max 3.0) — the heaviest factor: who reached out to whom
+  source_points:
+    Inbound demo request: 3.0
+    Referral: 2.5
+    Sales call: 2.0
+    Webinar attendee: 1.5
+    Content download: 1.0
+    LinkedIn outreach: 0.5
+
+  # Factor 4 — Engagement recency (max 2.0). First band whose max_days fits wins.
+  recency_bands:
+    - {max_days: 14,  points: 2.0, label: "hot (<=14 days)"}
+    - {max_days: 30,  points: 1.5, label: "warm (15-30 days)"}
+    - {max_days: 60,  points: 1.0, label: "cooling (31-60 days)"}
+    - {max_days: 120, points: 0.5, label: "cold (61-120 days)"}
+    - {max_days: 365, points: 0.0, label: "dormant (121-365 days)"}
+
+  # Below this LLM confidence an industry classification is treated as unknown.
+  min_industry_confidence: 0.6

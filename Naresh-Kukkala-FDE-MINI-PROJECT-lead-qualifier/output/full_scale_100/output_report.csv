@@ -1,0 +1,647 @@
+rank,lead_id,name,company,company_size,industry,source,last_interaction_date,days_since_last_touch,score,score_min,score_max,decision,priority,sla,reasoning,ai_risk_flags,data_issues,message_subject,message_body,message_source,llm_status
+1,L0001,Alice Chen,CloudScale AI,50,SaaS,Inbound demo request,2024-01-15,5,10.0,10.0,10.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 50 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 5d ago -> hot (<=14 days) | QUALIFIED: 10.0 >= 7.5 threshold,,,CloudScale AI demo—two slots this week,"Hi Alice,
+
+Thanks for requesting a demo. I'd love to show you how FlowPilot helps SaaS teams like CloudScale AI automate lead scoring and routing—most see response time drop from days to minutes.
+
+Can you do Tuesday 2pm or Thursday 10am this week? Either works for me.
+
+Priya",llm,ok
+2,L0030,Derek Johnson,Cloud Infrastructure,200,SaaS,Inbound demo request,2024-01-19,1,10.0,10.0,10.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 200 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 1d ago -> hot (<=14 days) | QUALIFIED: 10.0 >= 7.5 threshold,,,Your demo request: times this week,"Hi Derek,
+
+Thanks for requesting a demo yesterday. I want to get you scheduled while it's fresh.
+
+FlowPilot helps Cloud Infrastructure teams like yours respond to inbound leads in minutes instead of days. Can we lock in Tuesday 1pm or Thursday 9am for a 20-minute walkthrough?
+
+Looking forward.
+
+Priya",llm,ok
+3,L0057,Dominic Wheeler,Payment Processing,500,FinTech,Inbound demo request,2024-01-17,3,10.0,10.0,10.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 500 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'FinTech' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 3d ago -> hot (<=14 days) | QUALIFIED: 10.0 >= 7.5 threshold,,,Your Payment Processing demo,"Hi Dominic,
+
+Thanks for requesting a demo. I'd love to show you how FlowPilot helps fintech teams like yours automate lead scoring and routing—so your 500-person operation never misses a qualified prospect.
+
+Do you have 20 minutes Tuesday or Wednesday this week?
+
+Best,
+Priya",llm,ok
+4,L0063,Jerome Long,Logistics Optimization,85,Software,Inbound demo request,2024-01-11,9,10.0,10.0,10.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 85 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 9d ago -> hot (<=14 days) | QUALIFIED: 10.0 >= 7.5 threshold,,,Demo follow-up: Logistics Optimization,"Hi Jerome,
+
+Thanks for requesting a demo last week. I wanted to circle back and find a time that works best for your team at Logistics Optimization.
+
+How about Tuesday at 2pm or Wednesday at 10am this week? I can walk you through how we're helping similar-sized teams automate lead scoring and routing—so nothing falls through the cracks.
+
+Let me know what suits you.
+
+Best,
+Priya",llm,ok
+5,L0069,Penny Walsh,Mental Health Platform,75,HealthTech,Inbound demo request,2024-01-05,15,9.5,9.5,9.5,qualified,P1,contact within 24h,size: +2.5/2.5 — 75 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'HealthTech' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +1.5/2 — last touch 15d ago -> warm (15-30 days) | QUALIFIED: 9.5 >= 7.5 threshold,,,Demo follow-up: Mental Health Platform,"Hi Penny,
+
+Thanks for requesting a demo for Mental Health Platform. I'd love to find time this week to walk you through how we help HealthTech teams automate lead scoring and follow-up.
+
+How about Tuesday at 1pm or Wednesday at 4pm? Happy to work around your schedule.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+6,L0081,Bryson Hart,Climate Analytics,70,Climate Tech,Inbound demo request,2023-12-24,27,9.5,9.5,9.5,qualified,P1,contact within 24h,size: +2.5/2.5 — 70 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Climate Tech' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +1.5/2 — last touch 27d ago -> warm (15-30 days) | QUALIFIED: 9.5 >= 7.5 threshold,,,Demo follow-up: Climate Analytics,"Hi Bryson,
+
+Thanks for requesting a demo for Climate Analytics. I'd love to find time this week to walk you through how we help climate tech teams automate lead scoring and follow-up.
+
+How about Tuesday at 4pm or Wednesday at 2pm? Happy to work around your schedule.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+7,L0019,Samuel Lee,Cybersecurity Startup,60,Cybersecurity,Referral,2024-01-09,11,9.5,9.5,9.5,qualified,P1,contact within 24h,size: +2.5/2.5 — 60 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Cybersecurity' -> core vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 11d ago -> hot (<=14 days) | QUALIFIED: 9.5 >= 7.5 threshold,,,Cybersecurity Startup—lead workflow question,"Hi Samuel,
+
+Great to connect through the referral. I work with cybersecurity startups on automating lead scoring and follow-up.
+
+As you're scaling, what's your biggest bottleneck with inbound lead response right now?
+
+Priya",llm,ok
+8,L0056,Chloe Mitchell,Supply Chain Analytics,60,Software,Referral,2024-01-18,2,9.5,9.5,9.5,qualified,P1,contact within 24h,size: +2.5/2.5 — 60 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 2d ago -> hot (<=14 days) | QUALIFIED: 9.5 >= 7.5 threshold,,,Supply Chain Analytics lead routing,"Hi Chloe,
+
+Our mutual connection suggested we connect. I'm curious—at a 60-person software firm, how much time does your team spend on manual lead follow-up versus building product?
+
+FlowPilot automates that so your sales team stays on top of every inbound inquiry.
+
+Worth exploring?
+
+Best,
+Priya",llm,ok
+9,L0014,Nathan Brooks,Enterprise Solutions Corp,3500,Software,Inbound demo request,2024-01-13,7,9.2,9.2,9.2,qualified,P1,contact within 24h,size: +1.75/2.5 — 3500 employees -> upper mid-market (1001-5000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 7d ago -> hot (<=14 days) | QUALIFIED: 9.2 >= 7.5 threshold | AI note (low): Large enterprise (3500+ employees) with likely complex buying process,low: Large enterprise (3500+ employees) with likely complex buying process,,Your FlowPilot demo for Enterprise Solutions Corp,"Hi Nathan,
+
+Thanks for requesting a demo earlier this week. For an organisation of 3,500 people in Software, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Enterprise Solutions Corp could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.
+
+Would Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.
+
+Best,
+Priya Nair
+Account Executive, FlowPilot",template_fallback,ok
+10,L0010,Jack White,Digital Marketing Agency,120,Marketing,Inbound demo request,2024-01-19,1,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 120 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Marketing' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 1d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Digital Marketing Agency demo—this week,"Hi Jack,
+
+Thanks for requesting a demo. I'd love to show you how FlowPilot helps marketing agencies like yours automate lead scoring and follow-up—teams typically cut response time from days to minutes.
+
+Can you do Monday 2pm or Wednesday 10am?
+
+Priya",llm,ok
+11,L0036,James Wilson,Property Management,180,Real Estate,Inbound demo request,2024-01-18,2,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 180 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Real Estate' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 2d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Your demo request: times this week,"Hi James,
+
+Thanks for requesting a demo. I want to get you scheduled right away.
+
+Property Management teams like yours handle tenant inquiries, maintenance requests, and vendor leads constantly. FlowPilot routes and prioritizes them automatically—most teams cut response time from days to minutes.
+
+Can we lock in Tuesday 11am or Thursday 2pm?
+
+Priya",llm,ok
+12,L0041,Olivia Martinez,Renewable Energy Corp,600,Energy,Inbound demo request,2024-01-12,8,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 600 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Energy' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 8d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Your demo request: times this week,"Hi Olivia,
+
+Thanks for requesting a demo last week. I want to lock in a time while it's fresh.
+
+Renewable Energy Corp manages complex project inquiries and partnership leads. FlowPilot helps teams like yours respond in minutes instead of days—critical when opportunities are time-sensitive.
+
+Can we grab Tuesday 10am or Thursday 3pm for 20 minutes?
+
+Priya",llm,ok
+13,L0046,Sophia Moretti,Wine Distribution,95,Retail,Inbound demo request,2024-01-11,9,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 95 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +2/2 — last touch 9d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Your Wine Distribution demo,"Hi Sophia,
+
+Thanks for requesting a demo last week. I'd love to show you how FlowPilot helps smaller distribution teams like yours score and route leads automatically—so nothing slips through.
+
+Do you have 20 minutes Tuesday or Wednesday this week?
+
+Best,
+Priya",llm,ok
+14,L0054,Amelia Davis,Cybersecurity Consulting,95,Cybersecurity,Sales call,2024-01-20,0,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 95 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Cybersecurity' -> core vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 0d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Your Cybersecurity Consulting demo,"Hi Amelia,
+
+Great to connect today. I'd love to show you how FlowPilot helps security consultancies like yours keep every lead warm and routed instantly—so your 95-person team never misses a prospect.
+
+Can we lock in 20 minutes Tuesday or Wednesday this week?
+
+Best,
+Priya",llm,ok
+15,L0059,Franklin Hayes,Accounting Software,220,Software,Sales call,2024-01-15,5,9.0,9.0,9.0,qualified,P1,contact within 24h,size: +2.5/2.5 — 220 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 5d ago -> hot (<=14 days) | QUALIFIED: 9.0 >= 7.5 threshold,,,Accounting Software follow-up,"Hi Franklin,
+
+We spoke earlier this week about your lead process at Accounting Software. I wanted to follow up—220-person software teams often struggle with lead routing across sales and customer success.
+
+FlowPilot cuts response time from days to minutes. Does this week work for a 20-minute call?
+
+Best,
+Priya",llm,ok
+16,L0062,Iris Wagner,Telecommunications Equipment,2000,Telecom,Referral,2024-01-12,8,8.8,8.8,8.8,qualified,P2,contact within 3 business days,size: +1.75/2.5 — 2000 employees -> upper mid-market (1001-5000) | industry: +2.5/2.5 — 'Telecom' -> core vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 8d ago -> hot (<=14 days) | QUALIFIED: 8.8 >= 7.5 threshold,,,Telecom Equipment lead management,"Hi Iris,
+
+Our mutual connection thought we should connect. I'm curious how Telecommunications Equipment manages inbound lead routing across your 2000-person organization—especially with multiple sales teams.
+
+Many telecom vendors tell us automated routing saves weeks in cycle time.
+
+Worth a conversation?
+
+Best,
+Priya",llm,ok
+17,L0075,Veronica Adams,Commercial Cleaning,180,Business Services,Inbound demo request,2023-12-30,21,8.5,8.5,8.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 180 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Business Services' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +1.5/2 — last touch 21d ago -> warm (15-30 days) | QUALIFIED: 8.5 >= 7.5 threshold,,,Demo follow-up: Commercial Cleaning,"Hi Veronica,
+
+Thanks for requesting a demo for Commercial Cleaning. I'd love to find time this week to walk you through how we help service teams automate lead scoring and follow-up.
+
+How about Tuesday at 3pm or Wednesday at 11am? Happy to work around your schedule.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+18,L0045,Steven Chen,Robotics Company,75,Manufacturing,Referral,2024-01-07,13,8.5,8.5,8.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 75 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Manufacturing' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 13d ago -> hot (<=14 days) | QUALIFIED: 8.5 >= 7.5 threshold,,,Robotics Company lead follow-up,"Hi Steven,
+
+Our mutual connection suggested we connect. I'm curious—at a 75-person robotics firm, how much time does your team spend manually following up on inbound leads versus building product?
+
+We help manufacturers automate that handoff so sales stays on top of every inquiry.
+
+Worth a quick call?
+
+Best,
+Priya",llm,ok
+19,L0068,Oscar Rivera,Warehouse Automation,300,Logistics,Referral,2024-01-06,14,8.5,8.5,8.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 300 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Logistics' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 14d ago -> hot (<=14 days) | QUALIFIED: 8.5 >= 7.5 threshold,,,Warehouse Automation lead routing,"Hi Oscar,
+
+A colleague recommended I reach out to you at Warehouse Automation. With a team of 300, I imagine lead volume is real—and keeping everyone aligned on priority deals is a challenge.
+
+How are you currently routing inbound leads to your sales team?
+
+Best,
+Priya",llm,ok
+20,L0060,Gina Reeves,E-commerce Platform,140,SaaS,Webinar attendee,2024-01-14,6,8.5,8.5,8.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 140 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +1.5/3 — Webinar attendee intent | recency: +2/2 — last touch 6d ago -> hot (<=14 days) | QUALIFIED: 8.5 >= 7.5 threshold,,,E-commerce Platform lead routing,"Hi Gina,
+
+Thanks for joining our webinar last week. I noticed E-commerce Platform at 140 people—managing inbound leads across that scale typically means response times slip.
+
+FlowPilot automates routing and follow-up so your team responds in minutes. Worth a quick call?
+
+Best,
+Priya",llm,ok
+21,L0012,Leon Chen,FinTech Startup,25,FinTech,Referral,2024-01-17,3,8.2,8.2,8.2,qualified,P2,contact within 3 business days,size: +1.25/2.5 — 25 employees -> small (10-49) | industry: +2.5/2.5 — 'FinTech' -> core vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 3d ago -> hot (<=14 days) | QUALIFIED: 8.2 >= 7.5 threshold,,,FinTech Startup—quick question,"Hi Leon,
+
+Great to connect through the referral. I work with early-stage fintech teams on automating their inbound lead flow.
+
+As you're scaling, how are you currently handling lead routing and follow-up across your team?
+
+Priya",llm,ok
+22,L0026,Zara Hassan,Education Institution,600,Education,Inbound demo request,2023-12-05,46,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 600 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Education' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +1/2 — last touch 46d ago -> cooling (31-60 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Education institution; typically mandated procurement and longer sales cycles,low: Education institution; typically mandated procurement and longer sales cycles,,Demo follow-up: two times this week,"Hi Zara,
+
+Thanks for your demo request back in early November. I want to make sure we find the right time to show you how FlowPilot helps large teams like Education Institution cut lead response time from days to minutes.
+
+How does Tuesday 2pm or Thursday 10am work for a 20-minute walkthrough?
+
+Priya",llm,ok
+23,L0087,Harper Knight,Retail Inventory,140,Retail,Inbound demo request,2023-12-18,33,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 140 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +1/2 — last touch 33d ago -> cooling (31-60 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Retail inventory company; typically low inbound B2B lead maturity,low: Retail inventory company; typically low inbound B2B lead maturity,,Demo follow-up: Retail Inventory,"Hi Harper,
+
+Thanks for requesting a demo. I wanted to confirm timing that works for you this week.
+
+How does Tuesday at 2pm or Thursday at 10am look? We'll walk through how FlowPilot scores and routes your inbound leads automatically—most teams see response time drop from days to minutes.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+24,L0093,Natasha Volkov,Import Export Trading,350,Trade,Inbound demo request,2023-12-12,39,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 350 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Trade' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +1/2 — last touch 39d ago -> cooling (31-60 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Trade/import-export; complex procurement and regulatory environment typical for sector,low: Trade/import-export; complex procurement and regulatory environment typical for sector,,Demo confirmation: Import Export Trading,"Hi Natasha,
+
+Thanks for requesting a demo. I want to lock in a time that works for your schedule.
+
+Would Tuesday at 3pm or Friday at 11am suit you? We'll show how FlowPilot scores and routes your inbound leads automatically—especially valuable at your scale with 350 people.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+25,L0099,Tobias Wright,Vehicle Tracking,220,Automotive,Inbound demo request,2023-12-06,45,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 220 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Automotive' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +1/2 — last touch 45d ago -> cooling (31-60 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Demo confirmation: Vehicle Tracking,"Hi Tobias,
+
+Thanks for requesting a demo. Let's get it on the calendar.
+
+Would Monday at 2pm or Wednesday at 10am work for you? We'll show how FlowPilot scores and routes inbound leads automatically for your 220-person team—most logistics firms see response time drop significantly.
+
+Looking forward.
+
+Best,
+Priya",llm,ok
+26,L0050,William Knight,Pharmaceutical Distribution,400,Healthcare,Referral,2024-01-04,16,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 400 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1.5/2 — last touch 16d ago -> warm (15-30 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Pharma Distribution lead routing,"Hi William,
+
+Our mutual connection thought we should connect. I'm curious how Pharmaceutical Distribution handles inbound lead routing across your 400-person team—especially with compliance requirements.
+
+Many healthcare distributors tell us automated routing saves time and reduces handoff errors.
+
+Worth a conversation?
+
+Best,
+Priya",llm,ok
+27,L0074,Ulysses Morgan,Autonomous Vehicles,600,Automotive,Referral,2023-12-31,20,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 600 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Automotive' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1.5/2 — last touch 20d ago -> warm (15-30 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Large automotive company (600 people) typically has long sales cycles and established procurement processes,low: Large automotive company (600 people) typically has long sales cycles and established procurement processes,,Lead routing for Autonomous Vehicles,"Hi Ulysses,
+
+A colleague recommended I reach out to you at Autonomous Vehicles. With a team of 600, I imagine lead volume and coordination across your sales org is a real challenge.
+
+How are you currently routing and prioritizing inbound leads?
+
+Best,
+Priya",llm,ok
+28,L0080,Audrey Powell,Dental Practice Management,150,Healthcare,Referral,2023-12-25,26,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 150 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1.5/2 — last touch 26d ago -> warm (15-30 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Healthcare practice management typically has longer procurement cycles and established vendor relationships,low: Healthcare practice management typically has longer procurement cycles and established vendor relationships,,Lead routing for Dental Practice Management,"Hi Audrey,
+
+A colleague recommended I reach out to you at Dental Practice Management. With 150 people in healthcare, I imagine managing inbound leads and routing them efficiently is important.
+
+How are you currently handling lead prioritization and follow-up?
+
+Best,
+Priya",llm,ok
+29,L0022,Victor Moore,Real Estate Platform,250,Real Estate,Sales call,2024-01-06,14,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 250 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Real Estate' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 14d ago -> hot (<=14 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Real Estate Platform—demo this week,"Hi Victor,
+
+Following up on our call. I'd like to show you how FlowPilot helps real estate platforms automate lead scoring and follow-up—especially useful at your scale.
+
+Can you do Tuesday 10am or Thursday 1pm this week?
+
+Priya",llm,ok
+30,L0065,Lauren Blake,Medical Devices,450,Healthcare,Sales call,2024-01-09,11,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 450 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 11d ago -> hot (<=14 days) | QUALIFIED: 8.0 >= 7.5 threshold | AI note (low): Large healthcare company (450 people) typically has longer sales cycles and established procurement processes,low: Large healthcare company (450 people) typically has longer sales cycles and established procurement processes,,Demo confirmation: Medical Devices,"Hi Lauren,
+
+Great to connect on the call last week. I wanted to lock in a time for your demo this week.
+
+Would Tuesday at 3pm or Thursday at 11am work for you and your team at Medical Devices? I'll show you how we help 450-person teams keep lead response tight—especially when multiple people touch each deal.
+
+Looking forward to it.
+
+Best,
+Priya",llm,ok
+31,L0095,Priya Patel,Network Security,180,Cybersecurity,Sales call,2023-12-10,41,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 180 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Cybersecurity' -> core vertical | source: +2/3 — Sales call intent | recency: +1/2 — last touch 41d ago -> cooling (31-60 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Demo follow-up: Network Security,"Hi Priya,
+
+Thanks for the call. I want to get your demo scheduled this week.
+
+How does Wednesday at 1pm or Thursday at 4pm work? We'll walk through how FlowPilot automates lead scoring and routing for your 180-person team—most security firms see a significant drop in response time once it's live.
+
+Looking forward.
+
+Best,
+Priya Nair",llm,ok
+32,L0024,Xavier Lopez,Data Analytics Firm,110,Analytics,Webinar attendee,2023-12-22,29,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 110 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Analytics' -> core vertical | source: +1.5/3 — Webinar attendee intent | recency: +1.5/2 — last touch 29d ago -> warm (15-30 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Following up from our webinar,"Hi Xavier,
+
+Great to see Data Analytics Firm at our webinar last month. Given your focus on analytics, I'm curious: how are you currently prioritizing which inbound leads your team follows up on first?
+
+Most firms your size tell us they're making those calls manually. We built FlowPilot to automate that scoring and routing.
+
+Would love to hear your take.
+
+Priya",llm,ok
+33,L0078,Yolanda Martinez,Customer Support Platform,110,SaaS,Webinar attendee,2023-12-27,24,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 110 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +1.5/3 — Webinar attendee intent | recency: +1.5/2 — last touch 24d ago -> warm (15-30 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Lead routing for SaaS teams,"Hi Yolanda,
+
+Thanks for attending our webinar. I wanted to follow up with Customer Support Platform—with 110 people and inbound lead flow, I imagine routing and prioritization is a daily workflow.
+
+How are you currently managing lead distribution across your sales team?
+
+Best,
+Priya",llm,ok
+34,L0008,Henry Park,EdTech Innovations,75,EdTech,Content download,2024-01-14,6,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 75 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'EdTech' -> core vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 6d ago -> hot (<=14 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Lead response time in EdTech,"Hi Henry,
+
+Saw you downloaded our guide on lead routing. Most EdTech teams we talk to struggle with response time when inbound spikes—especially during enrollment windows.
+
+FlowPilot helps teams like EdTech Innovations automate scoring and routing so nothing falls through the cracks. Worth a quick conversation?
+
+Priya",llm,ok
+35,L0055,Bradley Foster,Cloud Storage,800,SaaS,Content download,2024-01-19,1,8.0,8.0,8.0,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 800 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 1d ago -> hot (<=14 days) | QUALIFIED: 8.0 >= 7.5 threshold,,,Cloud Storage lead response time,"Hi Bradley,
+
+I saw you downloaded our guide on lead scoring. At Cloud Storage, 800 people means your inbound volume is probably significant—and response time directly impacts conversion.
+
+FlowPilot automates scoring and routing so your team responds in minutes, not days.
+
+Worth a quick conversation?
+
+Best,
+Priya",llm,ok
+36,L0005,Emma Thompson,RetailWorks Solutions,200,Retail,Inbound demo request,2023-11-10,71,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 200 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +0.5/2 — last touch 71d ago -> cold (61-120 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): 71 days since last touch on inbound demo request—significant delay,low: 71 days since last touch on inbound demo request—significant delay,,Your FlowPilot demo for RetailWorks Solutions,"Hi Emma,
+
+Thanks for requesting a demo a little while back. For a team of about 200 in Retail, the usual bottleneck is wholesale and partnership enquiries mixed in with customer-service tickets, so I'd tailor the demo around how RetailWorks Solutions could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.
+
+Would Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.
+
+Best,
+Priya Nair
+Account Executive, FlowPilot",template_fallback,ok
+37,L0020,Tina Patel,Energy Solutions,900,Energy,Inbound demo request,2023-10-18,94,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 900 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Energy' -> adjacent vertical | source: +3/3 — Inbound demo request intent | recency: +0.5/2 — last touch 94d ago -> cold (61-120 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): 94 days since inbound demo request—significant delay,low: 94 days since inbound demo request—significant delay,,Energy Solutions—demo this week,"Hi Tina,
+
+I noticed your demo request from earlier this year. I'd still love to show you how FlowPilot helps energy teams automate lead routing and cut response time.
+
+Are you free Monday 1pm or Wednesday 3pm this week?
+
+Priya",llm,ok
+38,L0035,Isabella Romano,Luxury Hotels,350,Hospitality,Referral,2024-01-16,4,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 350 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Hospitality' -> low vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 4d ago -> hot (<=14 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): Hospitality sector; typically lower B2B lead velocity and event-driven procurement,low: Hospitality sector; typically lower B2B lead velocity and event-driven procurement,,Referral from our mutual connection,"Hi Isabella,
+
+Our mutual connection thought Luxury Hotels might benefit from streamlining how you handle vendor and partnership inquiries. At 350 properties, I imagine your ops team gets pulled in many directions.
+
+FlowPilot automates lead routing so your team focuses on what matters. Worth exploring?
+
+Priya",llm,ok
+39,L0086,Gemma Hart,Public Relations Firm,75,Marketing,Referral,2023-12-19,32,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 75 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Marketing' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1/2 — last touch 32d ago -> cooling (31-60 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Lead follow-up for PR teams,"Hi Gemma,
+
+A colleague referred us to you—they thought your team at Public Relations Firm might relate to our work helping agencies manage inbound client inquiries more efficiently.
+
+With 75 people, I imagine you're fielding RFPs and prospect calls regularly. One thing we hear often: teams spend too much time on manual routing and follow-up.
+
+What does your current process look like when a prospect reaches out?
+
+Best,
+Priya",llm,ok
+40,L0092,Marcus Stewart,Cyber Insurance,220,Insurance,Referral,2023-12-13,38,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 220 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Insurance' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1/2 — last touch 38d ago -> cooling (31-60 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Insurance lead response efficiency,"Hi Marcus,
+
+A colleague recommended we connect with you at Cyber Insurance.
+
+Insurance teams typically field dozens of inbound inquiries daily—from brokers, prospects, and partners. The bottleneck is usually response time and routing accuracy. FlowPilot automates both, so your team can focus on closing.
+
+What's your current process for handling inbound lead volume?
+
+Best,
+Priya",llm,ok
+41,L0098,Sophie Lawrence,Laboratory Information,170,Healthcare,Referral,2023-12-07,44,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 170 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +1/2 — last touch 44d ago -> cooling (31-60 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): Healthcare lab; regulated sector with complex procurement cycles,low: Healthcare lab; regulated sector with complex procurement cycles,,Lab operations and lead management,"Hi Sophie,
+
+A colleague thought Laboratory Information would be a good fit for what we do.
+
+With 170 people managing lab operations and vendor relationships, you likely field a steady stream of inbound inquiries. The challenge is keeping response time tight without adding overhead.
+
+FlowPilot automates lead scoring and routing. How are you currently handling inbound volume?
+
+Best,
+Priya",llm,ok
+42,L0049,Victoria Summers,Transportation Logistics,550,Logistics,Sales call,2023-12-28,23,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 550 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Logistics' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +1.5/2 — last touch 23d ago -> warm (15-30 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): Last touch 23 days ago; sales call followed by extended silence,low: Last touch 23 days ago; sales call followed by extended silence,,Transportation Logistics follow-up,"Hi Victoria,
+
+We spoke a few weeks back about your lead process at Transportation Logistics. I wanted to circle back—550-person operations often struggle with lead routing across multiple teams.
+
+FlowPilot cuts response time from days to minutes. Does this week work for a quick 20-minute call?
+
+Best,
+Priya",llm,ok
+43,L0071,Ruby Chen,Sustainable Fashion,85,Retail,Sales call,2024-01-03,17,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 85 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +1.5/2 — last touch 17d ago -> warm (15-30 days) | QUALIFIED: 7.5 >= 7.5 threshold | AI note (low): Retail/fashion typically has lower B2B lead volume and longer procurement cycles,low: Retail/fashion typically has lower B2B lead volume and longer procurement cycles,,Demo follow-up: Sustainable Fashion,"Hi Ruby,
+
+Great connecting on the call. I wanted to lock in your demo for Sustainable Fashion this week.
+
+Would Tuesday at 2pm or Thursday at 10am work? I'll show you how teams like yours automate lead scoring and routing—so nothing slips through the cracks.
+
+Let me know.
+
+Best,
+Priya",llm,ok
+44,L0017,Quinn Matthews,Consulting Firm,180,Consulting,Webinar attendee,2024-01-11,9,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 180 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Consulting' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +2/2 — last touch 9d ago -> hot (<=14 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Consulting Firm—lead routing question,"Hi Quinn,
+
+Thanks for joining our webinar last week. I work with consulting firms on automating inbound lead routing and follow-up.
+
+How are you currently managing lead distribution across your team when inbound volume spikes?
+
+Priya",llm,ok
+45,L0090,Kevin Grant,Knowledge Management,125,Software,Webinar attendee,2023-12-15,36,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 125 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +1.5/3 — Webinar attendee intent | recency: +1/2 — last touch 36d ago -> cooling (31-60 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Knowledge Management lead routing,"Hi Kevin,
+
+Thanks for attending our webinar. Knowledge Management with 125 people probably handles a steady stream of customer and prospect inquiries.
+
+One thing we've noticed: teams in your space often struggle with lead routing consistency, especially as you scale. FlowPilot handles that automatically.
+
+How are you currently managing inbound lead follow-up across your team?
+
+Best,
+Priya",llm,ok
+46,L0073,Tara Gonzalez,Nutrition Tech,50,HealthTech,Content download,2024-01-01,19,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 50 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'HealthTech' -> core vertical | source: +1/3 — Content download intent | recency: +1.5/2 — last touch 19d ago -> warm (15-30 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Automating lead routing for HealthTech,"Hi Tara,
+
+Saw you downloaded our guide on lead routing. At Nutrition Tech with 50 people, I imagine your team is wearing multiple hats—including lead follow-up.
+
+One thing we've noticed: even small HealthTech teams cut response time from days to minutes once they automate scoring and routing.
+
+What's your biggest challenge with inbound leads right now?
+
+Best,
+Priya",llm,ok
+47,L0037,Katherine Lee,Artificial Intelligence Lab,65,AI/ML,LinkedIn outreach,2024-01-13,7,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 65 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'AI/ML' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 7d ago -> hot (<=14 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Lead routing for AI/ML teams,"Hi Katherine,
+
+Artificial Intelligence Lab is probably fielding partnership and customer inquiries while your team focuses on research. At 65 people, I'd guess lead triage pulls engineering time.
+
+FlowPilot automates scoring and routing so your sales folks respond in minutes. Most teams see a big shift in response time.
+
+Worth a conversation?
+
+Priya",llm,ok
+48,L0058,Evelyn Richardson,Human Resources Tech,70,HR Tech,LinkedIn outreach,2024-01-16,4,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 70 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'HR Tech' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 4d ago -> hot (<=14 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,HR Tech lead follow-up automation,"Hi Evelyn,
+
+I came across your profile and noticed Human Resources Tech is in a growth phase. One thing we see across HR tech: as inbound picks up, manual follow-up becomes the bottleneck.
+
+How is your team currently managing lead routing and response time?
+
+Best,
+Priya",llm,ok
+49,L0064,Kennedy Owens,Environmental Monitoring,55,Climate Tech,LinkedIn outreach,2024-01-10,10,7.5,7.5,7.5,qualified,P2,contact within 3 business days,size: +2.5/2.5 — 55 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Climate Tech' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 10d ago -> hot (<=14 days) | QUALIFIED: 7.5 >= 7.5 threshold,,,Lead routing for climate tech,"Hi Kennedy,
+
+I came across Environmental Monitoring on LinkedIn and noticed you're building in climate tech with a focused team of 55. One thing we see with companies at your stage: inbound leads often sit in email until someone remembers to follow up.
+
+How are you currently managing lead follow-up across your team?
+
+Best,
+Priya",llm,ok
+50,L0039,Mona Patel,Blockchain Startup,22,Cryptocurrency,Referral,2024-01-15,5,7.2,7.2,7.2,review,P3-review,human decision within 2 business days,size: +1.25/2.5 — 22 employees -> small (10-49) | industry: +1.5/2.5 — 'Cryptocurrency' -> adjacent vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 5d ago -> hot (<=14 days) | REVIEW: 7.2 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Cryptocurrency/blockchain sector; high volatility and regulatory uncertainty,low: Cryptocurrency/blockchain sector; high volatility and regulatory uncertainty,,Referral from our mutual connection,"Hi Mona,
+
+Our mutual connection mentioned Blockchain Startup is scaling fast. At 22 people, I imagine you're juggling investor inquiries, partnership requests, and customer leads all at once.
+
+FlowPilot automates lead scoring and routing so your team responds in minutes. Worth a quick chat?
+
+Priya",llm,ok
+51,L0006,Frank Liu,Healthcare Systems Ltd,1200,Healthcare,Sales call,2024-01-12,8,7.2,7.2,7.2,review,P3-review,human decision within 2 business days,size: +1.75/2.5 — 1200 employees -> upper mid-market (1001-5000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 8d ago -> hot (<=14 days) | REVIEW: 7.2 sits in the 6.5-7.4 too-close-to-call band,,,Your FlowPilot demo for Healthcare Systems Ltd,"Hi Frank,
+
+Thanks for the conversation a few weeks ago. For an organisation of 1,200 people in Healthcare, the usual bottleneck is provider and partner enquiries stuck in shared inboxes, so I'd tailor the demo around how Healthcare Systems Ltd could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.
+
+Would Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.
+
+Best,
+Priya Nair
+Account Executive, FlowPilot",template_fallback,ok
+52,L0025,Yuki Tanaka,Travel Technology,55,Travel,Referral,2024-01-04,16,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 55 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Travel' -> low vertical | source: +2.5/3 — Referral intent | recency: +1.5/2 — last touch 16d ago -> warm (15-30 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Travel industry typically has lower B2B lead velocity and longer procurement cycles,low: Travel industry typically has lower B2B lead velocity and longer procurement cycles,,Referral from our mutual connection,"Hi Yuki,
+
+Our mutual connection mentioned Travel Technology is scaling fast. At 55 people, I imagine your team is wearing multiple hats—especially around lead follow-up.
+
+We work with similar-sized tech teams to automate lead scoring and routing, freeing up your sales folks to close rather than triage.
+
+Worth exploring?
+
+Priya",llm,ok
+53,L0011,Karen Miller,InsurancePro,600,Insurance,Sales call,2023-12-15,36,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 600 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Insurance' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +1/2 — last touch 36d ago -> cooling (31-60 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band,,,InsurancePro—let's schedule that demo,"Hi Karen,
+
+Following up on our call last month. I'd like to show you how FlowPilot helps insurance teams automate lead routing and response—especially valuable at your team size.
+
+Are you free Tuesday 11am or Thursday 2pm this week?
+
+Priya",llm,ok
+54,L0028,Bella Cross,Legal Services Firm,90,Legal,Sales call,2023-11-30,51,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 90 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Legal' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +1/2 — last touch 51d ago -> cooling (31-60 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Last touched 51 days ago; significant re-engagement risk,low: Last touched 51 days ago; significant re-engagement risk,,Let's lock in your demo time,"Hi Bella,
+
+We connected back in September, and I realize we didn't lock in a follow-up. Legal Services Firm's size means you're probably managing a steady stream of client inquiries—and response time matters.
+
+FlowPilot helps firms like yours route and prioritize leads automatically. Can we grab 20 minutes this week—Tuesday 3pm or Thursday 11am?
+
+Priya",llm,ok
+55,L0072,Silas Brown,Financial Advisory,140,Finance,Webinar attendee,2024-01-02,18,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 140 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Finance' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +1.5/2 — last touch 18d ago -> warm (15-30 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band,,,Lead routing for financial advisory,"Hi Silas,
+
+Thanks for attending our webinar. I wanted to follow up with Financial Advisory—with 140 people, I imagine managing inbound leads and routing them to the right advisor is a real workflow.
+
+How are you currently handling lead distribution across your team?
+
+Best,
+Priya",llm,ok
+56,L0084,Ezra Fox,Veterinary Practice,65,Healthcare,Webinar attendee,2023-12-21,30,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 65 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Healthcare' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +1.5/2 — last touch 30d ago -> warm (15-30 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Healthcare practice with 65 staff; likely mandated procurement and complex buying cycle,low: Healthcare practice with 65 staff; likely mandated procurement and complex buying cycle,,Streamlining your practice operations,"Hi Ezra,
+
+Thanks for joining our webinar. I noticed Veterinary Practice manages a 65-person team—that's a meaningful operation.
+
+Many practices we talk to spend significant time on manual follow-ups and scheduling. FlowPilot helps teams cut response time from days to minutes on inbound inquiries, which tends to matter when you're juggling patient care and admin.
+
+Would it make sense to grab 15 minutes this week to see if it fits your workflow?
+
+Best,
+Priya",llm,ok
+57,L0047,Theo Papadopoulos,Construction Tech,150,Construction,Content download,2024-01-06,14,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 150 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Construction' -> adjacent vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 14d ago -> hot (<=14 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band,,,Faster lead follow-up at Construction Tech,"Hi Theo,
+
+I noticed Construction Tech's interest in our work a few weeks ago. For a team of about 150 in Construction, one pattern we see often is RFQs and distributor enquiries routed by hand across regions — and response time is usually the cheapest win available.
+
+FlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for Construction Tech be useful? No call needed unless it is.
+
+Best,
+Priya Nair
+Account Executive, FlowPilot",template_fallback,ok
+58,L0061,Harrison Scott,Commercial Real Estate,900,Real Estate,Content download,2024-01-13,7,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 900 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Real Estate' -> adjacent vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 7d ago -> hot (<=14 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Commercial Real Estate typically has long sales cycles and may not prioritize rapid inbound lead response,low: Commercial Real Estate typically has long sales cycles and may not prioritize rapid inbound lead response,,Commercial Real Estate lead routing,"Hi Harrison,
+
+I saw you downloaded our guide on lead scoring. Commercial Real Estate deals move fast—and response time often determines who wins the deal.
+
+At 900 people, coordinating lead routing across teams gets complex. FlowPilot automates that so nothing slips.
+
+Worth exploring?
+
+Best,
+Priya",llm,ok
+59,L0067,Natalie Stone,Fashion E-commerce,110,Retail,Content download,2024-01-07,13,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 110 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 13d ago -> hot (<=14 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Retail/e-commerce typically has lower B2B lead volume and longer procurement cycles,low: Retail/e-commerce typically has lower B2B lead volume and longer procurement cycles,,Automating lead follow-up for retail,"Hi Natalie,
+
+Saw you downloaded our guide on lead routing. At Fashion E-commerce with 110 people, I imagine managing inbound leads manually can pull your team in different directions.
+
+One thing we've noticed: even lean teams cut response time from days to minutes once they automate scoring and routing.
+
+What's your biggest bottleneck with leads right now?
+
+Best,
+Priya",llm,ok
+60,L0048,Ursula Hoffmann,Insurance Tech,130,InsurTech,LinkedIn outreach,2024-01-05,15,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 130 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'InsurTech' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 15d ago -> warm (15-30 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band,,,InsurTech lead automation,"Hi Ursula,
+
+I came across your profile and noticed Insurance Tech is growing. One thing we see across the fintech space: as inbound volume picks up, manual follow-up becomes the bottleneck.
+
+How is your team currently handling lead routing and first-touch timing?
+
+Best,
+Priya",llm,ok
+61,L0070,Quinton Price,Database Software,250,Software,LinkedIn outreach,2024-01-04,16,7.0,7.0,7.0,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 250 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 16d ago -> warm (15-30 days) | REVIEW: 7.0 sits in the 6.5-7.4 too-close-to-call band,,,Lead routing for database software,"Hi Quinton,
+
+I found you on LinkedIn and noticed Database Software is 250 people deep in a competitive space. One pattern we see: software teams get a lot of inbound, but manual routing means some leads sit for days.
+
+How are you currently prioritizing and routing inbound leads?
+
+Best,
+Priya",llm,ok
+62,L0038,Liam O'Connor,Venture Capital Fund,40,Finance,Sales call,2024-01-10,10,6.8,6.8,6.8,review,P3-review,human decision within 2 business days,size: +1.25/2.5 — 40 employees -> small (10-49) | industry: +1.5/2.5 — 'Finance' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +2/2 — last touch 10d ago -> hot (<=14 days) | REVIEW: 6.8 sits in the 6.5-7.4 too-close-to-call band,,,Demo follow-up: two times this week,"Hi Liam,
+
+Thanks for our call last week. I want to make sure we find time to show you how FlowPilot helps Venture Capital Fund teams manage deal flow and inquiries more efficiently.
+
+We help firms your size respond to inbound leads in minutes instead of days. How does Tuesday 3pm or Thursday 11am work for a 20-minute demo?
+
+Priya",llm,ok
+63,L0032,Fiona Murphy,Telecommunications,2500,Telecom,Sales call,2023-11-15,66,6.8,6.8,6.8,review,P3-review,human decision within 2 business days,size: +1.75/2.5 — 2500 employees -> upper mid-market (1001-5000) | industry: +2.5/2.5 — 'Telecom' -> core vertical | source: +2/3 — Sales call intent | recency: +0.5/2 — last touch 66d ago -> cold (61-120 days) | REVIEW: 6.8 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Very large enterprise (2500 people) with long procurement cycles and complex stakeholder alignment | AI note (low): Last touched 66 days ago; significant re-engagement risk,low: Very large enterprise (2500 people) with long procurement cycles and complex stakeholder alignment | low: Last touched 66 days ago; significant re-engagement risk,,Reconnecting on your demo request,"Hi Fiona,
+
+We last connected in September around your demo interest. I realize we let this slip—my apologies. Telecommunications operations at your scale mean lead routing is mission-critical.
+
+FlowPilot helps large teams automate scoring and follow-up. Can we grab 20 minutes this week to reconnect—Tuesday 2pm or Thursday 10am?
+
+Priya",llm,ok
+64,L0044,Rebecca Green,Waste Management,1100,Environmental,Webinar attendee,2024-01-08,12,6.8,6.8,6.8,review,P3-review,human decision within 2 business days,size: +1.75/2.5 — 1100 employees -> upper mid-market (1001-5000) | industry: +1.5/2.5 — 'Environmental' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +2/2 — last touch 12d ago -> hot (<=14 days) | REVIEW: 6.8 sits in the 6.5-7.4 too-close-to-call band,,,Waste Management lead routing,"Hi Rebecca,
+
+Thanks for joining our webinar last week. I noticed Waste Management has about 1100 people—managing inbound leads across that scale typically means response times slip. Most teams we work with cut lead response from days to minutes once they automate routing and follow-up.
+
+Would it make sense to grab 15 minutes this week to see how that might work for your team?
+
+Best,
+Priya",llm,ok
+65,L0077,Ximena Flores,Gaming Studio,95,Entertainment,Sales call,2023-12-28,23,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 95 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Entertainment' -> low vertical | source: +2/3 — Sales call intent | recency: +1.5/2 — last touch 23d ago -> warm (15-30 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Entertainment/gaming typically has lower B2B lead volume and different sales dynamics,low: Entertainment/gaming typically has lower B2B lead volume and different sales dynamics,,Demo follow-up: Gaming Studio,"Hi Ximena,
+
+Great connecting on the call. I wanted to lock in your demo for Gaming Studio this week.
+
+Would Tuesday at 1pm or Thursday at 2pm work? I'll show you how teams like yours automate lead scoring and routing—so your sales team stays focused on closing.
+
+Let me know.
+
+Best,
+Priya",llm,ok
+66,L0033,Gabriella Torres,Beauty & Cosmetics,120,Consumer,Webinar attendee,2024-01-14,6,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 120 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Consumer' -> low vertical | source: +1.5/3 — Webinar attendee intent | recency: +2/2 — last touch 6d ago -> hot (<=14 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Consumer/beauty brand; typically lower B2B lead velocity,low: Consumer/beauty brand; typically lower B2B lead velocity,,Following up from our webinar,"Hi Gabriella,
+
+Great to see Beauty & Cosmetics at our webinar last week. I'm curious: when wholesale or partnership inquiries come in, how does your team decide who follows up and when?
+
+Most consumer brands tell us it's ad-hoc. FlowPilot automates that routing so nothing falls through the cracks.
+
+Worth a quick chat?
+
+Priya",llm,ok
+67,L0053,Zachary Pierce,Office Furniture,175,Retail,Webinar attendee,2023-12-18,33,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 175 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +1/2 — last touch 33d ago -> cooling (31-60 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band | AI note (low): Last touch 33 days ago; webinar attendee with no recent engagement,low: Last touch 33 days ago; webinar attendee with no recent engagement,,Office Furniture lead management,"Hi Zachary,
+
+Thanks for attending our webinar on lead routing last month. I wanted to check in—Office Furniture at 175 people often deals with bulk inquiries that need fast, accurate routing.
+
+Have you had a chance to think about how FlowPilot could help your team?
+
+Best,
+Priya",llm,ok
+68,L0023,Wendy Zhang,Fashion Brand,400,Retail,Content download,2024-01-05,15,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 400 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Retail' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1.5/2 — last touch 15d ago -> warm (15-30 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band,,,Lead response time for Fashion Brand,"Hi Wendy,
+
+Most retail teams we talk to spend days triaging inbound inquiries—especially during peak seasons. Fashion Brand's size means you're probably juggling volume across multiple channels.
+
+FlowPilot automatically scores and routes leads the moment they land, so your team responds in minutes instead. Teams typically cut response time from days to minutes.
+
+Worth a quick conversation?
+
+Priya",llm,ok
+69,L0029,Cassandra Jones,Media & Entertainment,150,Media,Content download,2024-01-01,19,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 150 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Media' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1.5/2 — last touch 19d ago -> warm (15-30 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band,,,Lead response for Media & Entertainment,"Hi Cassandra,
+
+Media & Entertainment teams juggle sponsorships, ad sales, and partnership inquiries across multiple channels. At 150 people, I'd guess your sales team spends real time just deciding who should follow up on what.
+
+FlowPilot automates that triage. Most teams cut response time from days to minutes.
+
+Worth a conversation?
+
+Priya",llm,ok
+70,L0042,Patricia Brown,Biotechnology Research,250,Biotech,LinkedIn outreach,2024-01-09,11,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 250 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Biotech' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 11d ago -> hot (<=14 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band,,,Lead routing for Biotech teams,"Hi Patricia,
+
+Biotechnology Research teams like yours field grant inquiries, partnership requests, and licensing leads constantly. At 250 people, I'd guess your ops team spends real time just triaging who should follow up.
+
+FlowPilot automates that routing. Most teams cut response time from days to minutes.
+
+Worth exploring?
+
+Priya",llm,ok
+71,L0088,Iris Monroe,Corporate Training,110,EdTech,LinkedIn outreach,2023-12-17,34,6.5,6.5,6.5,review,P3-review,human decision within 2 business days,size: +2.5/2.5 — 110 employees -> core mid-market (50-1000) | industry: +2.5/2.5 — 'EdTech' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1/2 — last touch 34d ago -> cooling (31-60 days) | REVIEW: 6.5 sits in the 6.5-7.4 too-close-to-call band,,,Lead routing for training teams,"Hi Iris,
+
+I came across Corporate Training on LinkedIn and thought there might be a fit.
+
+Training organizations typically field a lot of inbound inquiries—from prospects, partners, and program leads. The challenge is making sure nothing falls through the cracks while your team stays focused on delivery.
+
+FlowPilot automates scoring and routing so your team spends less time on admin. Does that resonate with what you're managing?
+
+Best,
+Priya",llm,ok
+,L0004,David Moore,StartupXYZ,3,SaaS,Referral,2024-01-18,2,7.0,7.0,7.0,rejected,—,no sales outreach,size: +0/2.5 — 3 employees -> micro (<10) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +2.5/3 — Referral intent | recency: +2/2 — last touch 2d ago -> hot (<=14 days) | KNOCKOUT: 3 employees is below the 10-person minimum (no RevOps/sales-ops function to buy),,,,,,not_needed
+,L0051,Xander Brooks,Virtual Reality Studios,45,Entertainment,Inbound demo request,2024-01-03,17,6.2,6.2,6.2,rejected,—,no sales outreach,size: +1.25/2.5 — 45 employees -> small (10-49) | industry: +0.5/2.5 — 'Entertainment' -> low vertical | source: +3/3 — Inbound demo request intent | recency: +1.5/2 — last touch 17d ago -> warm (15-30 days) | REJECTED: 6.2 < 6.5 threshold,,,,,,ok
+,L0016,Pamela White,Pharma Research Inc,2200,Pharmaceuticals,Sales call,2023-11-25,56,6.2,6.2,6.2,rejected,—,no sales outreach,"size: +1.75/2.5 — 2200 employees -> upper mid-market (1001-5000) | industry: +1.5/2.5 — 'Pharmaceuticals' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +1/2 — last touch 56d ago -> cooling (31-60 days) | REJECTED: 6.2 < 6.5 threshold | AI note (low): Pharma (2200+ employees) typically has regulated, lengthy procurement","low: Pharma (2200+ employees) typically has regulated, lengthy procurement",,,,,ok
+,L0066,Marcus Hunt,Venture Studio,35,Finance,Webinar attendee,2024-01-08,12,6.2,6.2,6.2,rejected,—,no sales outreach,size: +1.25/2.5 — 35 employees -> small (10-49) | industry: +1.5/2.5 — 'Finance' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +2/2 — last touch 12d ago -> hot (<=14 days) | REJECTED: 6.2 < 6.5 threshold,,,,,,ok
+,L0031,Ethan Smith,Mobile Development,40,Software,LinkedIn outreach,2024-01-17,3,6.2,6.2,6.2,rejected,—,no sales outreach,size: +1.25/2.5 — 40 employees -> small (10-49) | industry: +2.5/2.5 — 'Software' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 3d ago -> hot (<=14 days) | REJECTED: 6.2 < 6.5 threshold,,,,,,ok
+,L0089,Julian Parks,Hotel Management,250,Hospitality,Sales call,2023-12-16,35,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 250 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Hospitality' -> low vertical | source: +2/3 — Sales call intent | recency: +1/2 — last touch 35d ago -> cooling (31-60 days) | REJECTED: 6.0 < 6.5 threshold | AI note (low): Hospitality sector with 250 staff; typically low inbound B2B sales pipeline,low: Hospitality sector with 250 staff; typically low inbound B2B sales pipeline,,,,,ok
+,L0007,Grace Lee,Manufacturing Co,450,Manufacturing,Webinar attendee,2023-10-05,107,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 450 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Manufacturing' -> adjacent vertical | source: +1.5/3 — Webinar attendee intent | recency: +0.5/2 — last touch 107d ago -> cold (61-120 days) | REJECTED: 6.0 < 6.5 threshold | AI note (low): 107 days since webinar attendance—very cold,low: 107 days since webinar attendance—very cold,,,,,ok
+,L0097,Raymond Grant,Logistics Tracking,300,Logistics,Content download,2023-12-08,43,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 300 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Logistics' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 43d ago -> cooling (31-60 days) | REJECTED: 6.0 < 6.5 threshold,,,,,,ok
+,L0027,Aaron Benjamin,Supply Chain Co,320,Supply Chain,LinkedIn outreach,2024-01-02,18,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 320 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Supply Chain' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 18d ago -> warm (15-30 days) | REJECTED: 6.0 < 6.5 threshold,,,,,,ok
+,L0076,Walter Buchanan,Construction Management,320,Construction,LinkedIn outreach,2023-12-29,22,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 320 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Construction' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 22d ago -> warm (15-30 days) | REJECTED: 6.0 < 6.5 threshold | AI note (low): Construction typically has lower B2B lead volume and longer procurement cycles,low: Construction typically has lower B2B lead volume and longer procurement cycles,,,,,ok
+,L0082,Cecilia Santos,Freight Forwarding,400,Logistics,LinkedIn outreach,2023-12-23,28,6.0,6.0,6.0,rejected,—,no sales outreach,size: +2.5/2.5 — 400 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Logistics' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 28d ago -> warm (15-30 days) | REJECTED: 6.0 < 6.5 threshold | AI note (low): Logistics/freight forwarding typically has longer procurement cycles and established vendor relationships,low: Logistics/freight forwarding typically has longer procurement cycles and established vendor relationships,,,,,ok
+,L0043,Quincy Adams,Streaming Service,3000,Media,Sales call,2023-10-30,82,5.8,5.8,5.8,rejected,—,no sales outreach,size: +1.75/2.5 — 3000 employees -> upper mid-market (1001-5000) | industry: +1.5/2.5 — 'Media' -> adjacent vertical | source: +2/3 — Sales call intent | recency: +0.5/2 — last touch 82d ago -> cold (61-120 days) | REJECTED: 5.8 < 6.5 threshold | AI note (low): Company name 'Streaming Service' is generic placeholder-like; lacks specificity | AI note (low): Last touch 82 days ago; significant gap since sales call,low: Company name 'Streaming Service' is generic placeholder-like; lacks specificity | low: Last touch 82 days ago; significant gap since sales call,,,,,ok
+,L0100,Uriel Reyes,Waste Reduction,95,Environmental,LinkedIn outreach,2023-12-05,46,5.5,5.5,5.5,rejected,—,no sales outreach,size: +2.5/2.5 — 95 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Environmental' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1/2 — last touch 46d ago -> cooling (31-60 days) | REJECTED: 5.5 < 6.5 threshold,,,,,,ok
+,L0083,Daisy Newton,Wedding Planning Tech,38,Events,Sales call,2023-12-22,29,5.2,5.2,5.2,rejected,—,no sales outreach,size: +1.25/2.5 — 38 employees -> small (10-49) | industry: +0.5/2.5 — 'Events' -> low vertical | source: +2/3 — Sales call intent | recency: +1.5/2 — last touch 29d ago -> warm (15-30 days) | REJECTED: 5.2 < 6.5 threshold | AI note (low): Events industry typically has low B2B lead pipeline and inbound sales maturity,low: Events industry typically has low B2B lead pipeline and inbound sales maturity,,,,,ok
+,L0079,Zachary Coleman,Landscaping Services,42,Services,Content download,2023-12-26,25,5.2,5.2,5.2,rejected,—,no sales outreach,size: +1.25/2.5 — 42 employees -> small (10-49) | industry: +1.5/2.5 — 'Services' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1.5/2 — last touch 25d ago -> warm (15-30 days) | REJECTED: 5.2 < 6.5 threshold | AI note (low): Landscaping services typically has minimal B2B lead flow and limited sales infrastructure,low: Landscaping services typically has minimal B2B lead flow and limited sales infrastructure,,,,,ok
+,L0003,Carol Singh,National Bank Corp,5000,Finance,Content download,2023-12-01,50,5.2,5.2,5.2,rejected,—,no sales outreach,size: +1.75/2.5 — 5000 employees -> upper mid-market (1001-5000) | industry: +1.5/2.5 — 'Finance' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 50d ago -> cooling (31-60 days) | REJECTED: 5.2 < 6.5 threshold | AI note (low): Large enterprise (5000+ employees) with likely long procurement cycle,low: Large enterprise (5000+ employees) with likely long procurement cycle,,,,,ok
+,L0018,Rachel Kim,Government Agency,800,Government,Content download,2023-12-10,41,5.0,5.0,5.0,rejected,—,no sales outreach,size: +2.5/2.5 — 800 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Government' -> low vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 41d ago -> cooling (31-60 days) | REJECTED: 5.0 < 6.5 threshold | AI note (low): Government agency—likely mandated procurement and long sales cycle,low: Government agency—likely mandated procurement and long sales cycle,,,,,ok
+,L0040,Nicholas Anderson,Sports Management,85,Sports,Content download,2023-12-20,31,5.0,5.0,5.0,rejected,—,no sales outreach,size: +2.5/2.5 — 85 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Sports' -> low vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 31d ago -> cooling (31-60 days) | REJECTED: 5.0 < 6.5 threshold | AI note (low): Sports management; typically lower B2B lead velocity,low: Sports management; typically lower B2B lead velocity,,,,,ok
+,L0085,Finn O'Brien,Craft Beverage,85,Consumer,Content download,2023-12-20,31,5.0,5.0,5.0,rejected,—,no sales outreach,size: +2.5/2.5 — 85 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Consumer' -> low vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 31d ago -> cooling (31-60 days) | REJECTED: 5.0 < 6.5 threshold | AI note (low): Consumer beverage company; minimal B2B lead pipeline typical for this segment,low: Consumer beverage company; minimal B2B lead pipeline typical for this segment,,,,,ok
+,L0002,Bob Rodriguez,TechVentures Inc,8,SaaS,LinkedIn outreach,2024-01-20,0,5.0,5.0,5.0,rejected,—,no sales outreach,size: +0/2.5 — 8 employees -> micro (<10) | industry: +2.5/2.5 — 'SaaS' -> core vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 0d ago -> hot (<=14 days) | KNOCKOUT: 8 employees is below the 10-person minimum (no RevOps/sales-ops function to buy),,,,,,not_needed
+,L0013,Maya Desai,Agricultural Tech,45,Agriculture,Content download,2024-01-16,4,4.8,4.8,4.8,rejected,—,no sales outreach,size: +1.25/2.5 — 45 employees -> small (10-49) | industry: +0.5/2.5 — 'Agriculture' -> low vertical | source: +1/3 — Content download intent | recency: +2/2 — last touch 4d ago -> hot (<=14 days) | REJECTED: 4.8 < 6.5 threshold,,,,,,ok
+,L0091,Louisa Blake,Interior Design Services,28,Services,Content download,2023-12-14,37,4.8,4.8,4.8,rejected,—,no sales outreach,size: +1.25/2.5 — 28 employees -> small (10-49) | industry: +1.5/2.5 — 'Services' -> adjacent vertical | source: +1/3 — Content download intent | recency: +1/2 — last touch 37d ago -> cooling (31-60 days) | REJECTED: 4.8 < 6.5 threshold | AI note (low): Interior Design Services (28 staff); consumer-facing services with minimal B2B lead pipeline,low: Interior Design Services (28 staff); consumer-facing services with minimal B2B lead pipeline,,,,,ok
+,L0052,Yasmine Aziz,Pet Care Services,28,Consumer Services,LinkedIn outreach,2024-01-02,18,4.8,4.8,4.8,rejected,—,no sales outreach,size: +1.25/2.5 — 28 employees -> small (10-49) | industry: +1.5/2.5 — 'Consumer Services' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1.5/2 — last touch 18d ago -> warm (15-30 days) | REJECTED: 4.8 < 6.5 threshold | AI note (low): Pet Care Services (28 people) is consumer-facing with minimal B2B lead pipeline; poor fit for revenue-ops platform,low: Pet Care Services (28 people) is consumer-facing with minimal B2B lead pipeline; poor fit for revenue-ops platform,,,,,ok
+,L0094,Oliver Thorne,Museum Management,65,Cultural,LinkedIn outreach,2023-12-11,40,4.5,4.5,4.5,rejected,—,no sales outreach,size: +2.5/2.5 — 65 employees -> core mid-market (50-1000) | industry: +0.5/2.5 — 'Cultural' -> low vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +1/2 — last touch 40d ago -> cooling (31-60 days) | REJECTED: 4.5 < 6.5 threshold | AI note (low): Museum/cultural institution; typically low B2B lead pipeline and limited sales operations,low: Museum/cultural institution; typically low B2B lead pipeline and limited sales operations,,,,,ok
+,L0009,Iris Patel,Logistics Global,800,Logistics,LinkedIn outreach,2023-09-20,122,4.5,4.5,4.5,rejected,—,no sales outreach,size: +2.5/2.5 — 800 employees -> core mid-market (50-1000) | industry: +1.5/2.5 — 'Logistics' -> adjacent vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +0/2 — last touch 122d ago -> dormant (121-365 days) | REJECTED: 4.5 < 6.5 threshold | AI note (low): 122 days since LinkedIn outreach—very cold,low: 122 days since LinkedIn outreach—very cold,,,,,ok
+,L0096,Quinn Murphy,Volunteer Management,40,NonProfit,Webinar attendee,2023-12-09,42,4.2,4.2,4.2,rejected,—,no sales outreach,size: +1.25/2.5 — 40 employees -> small (10-49) | industry: +0.5/2.5 — 'NonProfit' -> low vertical | source: +1.5/3 — Webinar attendee intent | recency: +1/2 — last touch 42d ago -> cooling (31-60 days) | REJECTED: 4.2 < 6.5 threshold | AI note (low): Nonprofit volunteer management; mandated procurement and limited B2B sales pipeline typical,low: Nonprofit volunteer management; mandated procurement and limited B2B sales pipeline typical,,,,,ok
+,L0021,Uma Singh,Event Planning Co,35,Events,LinkedIn outreach,2024-01-08,12,4.2,4.2,4.2,rejected,—,no sales outreach,size: +1.25/2.5 — 35 employees -> small (10-49) | industry: +0.5/2.5 — 'Events' -> low vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +2/2 — last touch 12d ago -> hot (<=14 days) | REJECTED: 4.2 < 6.5 threshold | AI note (low): Events/planning (35 people)—minimal B2B lead pipeline,low: Events/planning (35 people)—minimal B2B lead pipeline,,,,,ok
+,L0034,Hassan Khalil,Oil & Gas Corp,8000,Energy,Content download,2023-09-01,141,3.2,3.2,3.2,rejected,—,no sales outreach,"size: +0.75/2.5 — 8000 employees -> enterprise (5000+), long procurement | industry: +1.5/2.5 — 'Energy' -> adjacent vertical | source: +1/3 — Content download intent | recency: +0/2 — last touch 141d ago -> dormant (121-365 days) | REJECTED: 3.2 < 6.5 threshold | AI note (low): Very large enterprise (8000 people) with complex procurement and long sales cycles | AI note (low): Last touched 141 days ago; deal likely cold",low: Very large enterprise (8000 people) with complex procurement and long sales cycles | low: Last touched 141 days ago; deal likely cold,,,,,ok
+,L0015,Olivia Garcia,Local Restaurant Group,12,Hospitality,LinkedIn outreach,2023-08-30,143,2.2,2.2,2.2,rejected,—,no sales outreach,size: +1.25/2.5 — 12 employees -> small (10-49) | industry: +0.5/2.5 — 'Hospitality' -> low vertical | source: +0.5/3 — LinkedIn outreach intent | recency: +0/2 — last touch 143d ago -> dormant (121-365 days) | REJECTED: 2.2 < 6.5 threshold | AI note (low): 143 days since LinkedIn outreach—very cold | AI note (low): Hospitality/restaurant group (12 people)—unlikely B2B lead pipeline,low: 143 days since LinkedIn outreach—very cold | low: Hospitality/restaurant group (12 people)—unlikely B2B lead pipeline,,,,,ok

@@ -1,0 +1,14 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Leftovers / build artefacts (zips are rebuilt from the folder)
+zik3syLL
+lead-qualifier-new.zip
+lead-qualifier.zip
+.DS_Store

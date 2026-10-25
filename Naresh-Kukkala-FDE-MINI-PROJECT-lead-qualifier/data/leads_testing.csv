@@ -1,0 +1,21 @@
+name,company,company_size,industry,source,last_interaction_date
+Test_MissingSize,Test Inc,NA,SaaS,Inbound demo request,2024-01-20
+Test_VeryLargeEnterprise,Global Fortune 500 Corp,50000,Enterprise Software,Inbound demo request,2024-01-20
+Test_Solo,John Doe Consulting,1,Consulting,LinkedIn outreach,2024-01-20
+Test_StaleInteraction,Old Company Inc,100,Manufacturing,Sales call,2022-06-15
+Test_RecentEngagement,Hot Lead Corp,200,SaaS,Inbound demo request,2024-01-20
+Test_MissingDate,Mystery Co,150,Technology,,
+Test_UnknownIndustry,Mysterious Startup,15,Unknown Sector,Referral,2024-01-19
+Test_VeryRecentSignup,Brand New Startup,2,SaaS,Inbound demo request,2024-01-20
+Test_MultipleInteractions,Active Company,500,Finance,Inbound demo request,2024-01-20
+Test_NoSourceInfo,Source Unknown Corp,300,Retail,Unknown Source,2024-01-18
+Test_HighValueMatch,Perfect Fit Enterprise,2000,SaaS,Inbound demo request,2024-01-20
+Test_LowValueNiche,Niche Small Op,5,Agriculture,LinkedIn outreach,2024-01-15
+Test_MissingName,,400,Consulting,Sales call,2024-01-19
+Test_NameOnly,James Wilson,NA,NA,NA,NA
+Test_PartialData,Tech Partial,NA,SaaS,,2024-01-20
+Test_WeekOldInteraction,Week Old Corp,250,Logistics,Webinar attendee,2024-01-13
+Test_MidMarketSoft,Mid Market Software,1500,SaaS,Content download,2024-01-18
+Test_StartupShutdown,Failed Startup,8,SaaS,Referral,2023-05-01
+Test_GovernmentBuyer,Government Tech,3000,Government,Sales call,2024-01-17
+Test_SMBAverage,Average SMB Co,120,Retail,Inbound demo request,2024-01-19

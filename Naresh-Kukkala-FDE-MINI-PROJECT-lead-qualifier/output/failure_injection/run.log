@@ -1,0 +1,17 @@
+2026-10-25 05:12:40,099 INFO    lead_qualifier.ingest: Loaded 100 leads from data/leads_full_scale_100.csv (0 with data issues)
+2026-10-25 05:12:40,099 INFO    lead_qualifier.pipeline: Analysis date (as_of) = 2024-01-20
+2026-10-25 05:12:40,101 INFO    lead_qualifier.pipeline: LLM batch 1/5 (20 leads)
+2026-10-25 05:12:40,101 WARNING lead_qualifier.llm: Retry 1/4 in 2.6s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:12:42,712 WARNING lead_qualifier.llm: Retry 2/4 in 4.3s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:12:47,051 WARNING lead_qualifier.llm: Retry 3/4 in 8.6s after: malformed JSON from model: Expecting ',' delimiter: line 1 column 5668 (char 5667)
+2026-10-25 05:12:55,671 INFO    lead_qualifier.pipeline: LLM batch 2/5 (20 leads)
+2026-10-25 05:12:55,672 WARNING lead_qualifier.llm: Retry 1/4 in 2.7s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:12:58,341 WARNING lead_qualifier.llm: Retry 2/4 in 4.2s after: malformed JSON from model: Expecting ',' delimiter: line 1 column 7013 (char 7012)
+2026-10-25 05:13:02,513 WARNING lead_qualifier.llm: Retry 3/4 in 8.2s after: malformed JSON from model: Expecting ',' delimiter: line 1 column 7013 (char 7012)
+2026-10-25 05:13:10,701 WARNING lead_qualifier.llm: Retry 4/4 in 16.6s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:13:27,334 INFO    lead_qualifier.pipeline: LLM batch 3/5 (20 leads)
+2026-10-25 05:13:27,335 WARNING lead_qualifier.llm: Retry 1/4 in 2.6s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:13:29,984 WARNING lead_qualifier.llm: Retry 2/4 in 4.7s after: mock: simulated 503 Service Unavailable
+2026-10-25 05:13:34,678 INFO    lead_qualifier.pipeline: LLM batch 4/5 (20 leads)
+2026-10-25 05:13:34,679 INFO    lead_qualifier.pipeline: LLM batch 5/5 (18 leads)
+2026-10-25 05:13:34,679 WARNING lead_qualifier.llm: Retry 1/4 in 2.9s after: malformed JSON from model: Expecting ',' delimiter: line 1 column 4789 (char 4788)

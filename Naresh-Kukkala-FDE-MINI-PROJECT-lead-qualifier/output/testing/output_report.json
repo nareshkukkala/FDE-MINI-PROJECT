@@ -1,0 +1,1756 @@
+{
+  "run": {
+    "generated_at": "2026-10-25T05:12:39",
+    "input_file": "leads_testing.csv",
+    "analysis_date": "2024-01-20",
+    "llm_provider": "mock",
+    "llm_model": "mock-deterministic",
+    "batches": 1,
+    "api_calls": 1,
+    "retries": 0,
+    "rate_limited": 0,
+    "failed_calls": 0,
+    "leads_with_ai_enrichment": 15,
+    "leads_rubric_only_fallback": 0,
+    "duration_seconds": 0.0
+  },
+  "rubric": {
+    "summary": "Score = size fit (0-2.5) + industry fit (0-2.5) + source intent (0-3) + recency (0-2), max 10. >= 7.5 qualified, < 6.5 rejected, in between = human review. Knockouts: < 10 employees or no contact in > 365 days. Missing fields are scored as a range; if the range straddles a threshold the lead goes to review. AI red flags can move a qualified lead to review but never qualify or reject on their own.",
+    "thresholds": {
+      "qualified_min": 7.5,
+      "rejected_below": 6.5,
+      "p1_min": 9.0
+    },
+    "knockouts": {
+      "min_company_size": 10,
+      "max_days_since_interaction": 365
+    }
+  },
+  "stats": {
+    "total_processed": 20,
+    "qualified": 6,
+    "qualified_pct": 30.0,
+    "review": 8,
+    "review_pct": 40.0,
+    "rejected": 6,
+    "rejected_pct": 30.0,
+    "p1_count": 4,
+    "p2_count": 2,
+    "avg_score": 6.48,
+    "common_rejection_reasons": [
+      [
+        "company too small (<10 employees)",
+        4
+      ],
+      [
+        "low-fit industry",
+        1
+      ],
+      [
+        "stale engagement (>1 year)",
+        1
+      ]
+    ],
+    "common_review_reasons": [
+      [
+        "company name missing — verify account before outreach",
+        1
+      ],
+      [
+        "AI red flag",
+        1
+      ],
+      [
+        "borderline score (6.5-7.4 band)",
+        1
+      ],
+      [
+        "decision depends on missing data (source)",
+        1
+      ],
+      [
+        "decision depends on missing data (industry)",
+        1
+      ],
+      [
+        "decision depends on missing data (source, recency)",
+        1
+      ],
+      [
+        "decision depends on missing data (size, source)",
+        1
+      ],
+      [
+        "decision depends on missing data (size, industry, source, recency)",
+        1
+      ]
+    ],
+    "data_quality_issues": [
+      [
+        "source missing/unknown",
+        4
+      ],
+      [
+        "company_size missing",
+        3
+      ],
+      [
+        "industry missing/unknown",
+        2
+      ],
+      [
+        "last_interaction_date missing",
+        2
+      ],
+      [
+        "company missing",
+        1
+      ]
+    ],
+    "qualified_by_source": [
+      [
+        "Inbound demo request",
+        5
+      ],
+      [
+        "Webinar attendee",
+        1
+      ]
+    ],
+    "qualified_by_industry_tier": [
+      [
+        "core",
+        3
+      ],
+      [
+        "adjacent",
+        3
+      ]
+    ],
+    "est_manual_minutes_saved": 200
+  },
+  "alerts": [],
+  "priority_queue": [
+    {
+      "rank": 1,
+      "lead_id": "L0005",
+      "name": "Test_RecentEngagement",
+      "company": "Hot Lead Corp",
+      "score": 10.0,
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "source": "Inbound demo request",
+      "sales_angle": "Inbound demo request lead from Hot Lead Corp (SaaS); lead with response-time pain."
+    },
+    {
+      "rank": 2,
+      "lead_id": "L0011",
+      "name": "Test_HighValueMatch",
+      "company": "Perfect Fit Enterprise",
+      "score": 9.2,
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "source": "Inbound demo request",
+      "sales_angle": "Inbound demo request lead from Perfect Fit Enterprise (SaaS); lead with response-time pain."
+    },
+    {
+      "rank": 3,
+      "lead_id": "L0009",
+      "name": "Test_MultipleInteractions",
+      "company": "Active Company",
+      "score": 9.0,
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "source": "Inbound demo request",
+      "sales_angle": "Inbound demo request lead from Active Company (Finance); lead with response-time pain."
+    },
+    {
+      "rank": 4,
+      "lead_id": "L0020",
+      "name": "Test_SMBAverage",
+      "company": "Average SMB Co",
+      "score": 9.0,
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "source": "Inbound demo request",
+      "sales_angle": "Inbound demo request lead from Average SMB Co (Retail); lead with response-time pain."
+    },
+    {
+      "rank": 5,
+      "lead_id": "L0002",
+      "name": "Test_VeryLargeEnterprise",
+      "company": "Global Fortune 500 Corp",
+      "score": 8.2,
+      "priority": "P2",
+      "sla": "contact within 3 business days",
+      "source": "Inbound demo request",
+      "sales_angle": "Inbound demo request lead from Global Fortune 500 Corp (Enterprise Software); lead with response-time pain."
+    },
+    {
+      "rank": 6,
+      "lead_id": "L0016",
+      "name": "Test_WeekOldInteraction",
+      "company": "Week Old Corp",
+      "score": 7.5,
+      "priority": "P2",
+      "sla": "contact within 3 business days",
+      "source": "Webinar attendee",
+      "sales_angle": "Webinar attendee lead from Week Old Corp (Logistics); lead with response-time pain."
+    }
+  ],
+  "flagged_for_review": [
+    {
+      "rank": 7,
+      "lead_id": "L0013",
+      "name": "Test_MissingName",
+      "company": null,
+      "score": 8.0,
+      "score_range": [
+        8.0,
+        8.0
+      ],
+      "why": [
+        "company name missing — verify account before outreach"
+      ],
+      "data_issues": [
+        "company missing"
+      ]
+    },
+    {
+      "rank": 8,
+      "lead_id": "L0001",
+      "name": "Test_MissingSize",
+      "company": "Test Inc",
+      "score": 7.5,
+      "score_range": [
+        7.5,
+        10.0
+      ],
+      "why": [
+        "AI red flag: company name looks like test/placeholder data"
+      ],
+      "data_issues": [
+        "company_size missing"
+      ]
+    },
+    {
+      "rank": 9,
+      "lead_id": "L0017",
+      "name": "Test_MidMarketSoft",
+      "company": "Mid Market Software",
+      "score": 7.2,
+      "score_range": [
+        7.2,
+        7.2
+      ],
+      "why": [
+        "borderline score (6.5-7.4 band)"
+      ],
+      "data_issues": []
+    },
+    {
+      "rank": 10,
+      "lead_id": "L0010",
+      "name": "Test_NoSourceInfo",
+      "company": "Source Unknown Corp",
+      "score": 6.0,
+      "score_range": [
+        6.0,
+        9.0
+      ],
+      "why": [
+        "decision depends on missing data (source)"
+      ],
+      "data_issues": [
+        "source missing/unknown"
+      ]
+    },
+    {
+      "rank": 11,
+      "lead_id": "L0007",
+      "name": "Test_UnknownIndustry",
+      "company": "Mysterious Startup",
+      "score": 5.8,
+      "score_range": [
+        5.8,
+        8.2
+      ],
+      "why": [
+        "decision depends on missing data (industry)"
+      ],
+      "data_issues": [
+        "industry missing/unknown"
+      ]
+    },
+    {
+      "rank": 12,
+      "lead_id": "L0006",
+      "name": "Test_MissingDate",
+      "company": "Mystery Co",
+      "score": 5.0,
+      "score_range": [
+        5.0,
+        10.0
+      ],
+      "why": [
+        "decision depends on missing data (source, recency)"
+      ],
+      "data_issues": [
+        "source missing/unknown",
+        "last_interaction_date missing"
+      ]
+    },
+    {
+      "rank": 13,
+      "lead_id": "L0015",
+      "name": "Test_PartialData",
+      "company": "Tech Partial",
+      "score": 4.5,
+      "score_range": [
+        4.5,
+        10.0
+      ],
+      "why": [
+        "decision depends on missing data (size, source)"
+      ],
+      "data_issues": [
+        "company_size missing",
+        "source missing/unknown"
+      ]
+    },
+    {
+      "rank": 14,
+      "lead_id": "L0014",
+      "name": "Test_NameOnly",
+      "company": "James Wilson",
+      "score": 1.0,
+      "score_range": [
+        1.0,
+        10.0
+      ],
+      "why": [
+        "decision depends on missing data (size, industry, source, recency)"
+      ],
+      "data_issues": [
+        "company_size missing",
+        "industry missing/unknown",
+        "source missing/unknown",
+        "last_interaction_date missing"
+      ]
+    }
+  ],
+  "disqualified": [
+    {
+      "lead_id": "L0008",
+      "name": "Test_VeryRecentSignup",
+      "company": "Brand New Startup",
+      "score": 7.5,
+      "why": [
+        "company too small (<10 employees)"
+      ]
+    },
+    {
+      "lead_id": "L0019",
+      "name": "Test_GovernmentBuyer",
+      "company": "Government Tech",
+      "score": 6.2,
+      "why": [
+        "low-fit industry"
+      ]
+    },
+    {
+      "lead_id": "L0004",
+      "name": "Test_StaleInteraction",
+      "company": "Old Company Inc",
+      "score": 6.0,
+      "why": [
+        "stale engagement (>1 year)"
+      ]
+    },
+    {
+      "lead_id": "L0018",
+      "name": "Test_StartupShutdown",
+      "company": "Failed Startup",
+      "score": 5.0,
+      "why": [
+        "company too small (<10 employees)"
+      ]
+    },
+    {
+      "lead_id": "L0003",
+      "name": "Test_Solo",
+      "company": "John Doe Consulting",
+      "score": 4.0,
+      "why": [
+        "company too small (<10 employees)"
+      ]
+    },
+    {
+      "lead_id": "L0012",
+      "name": "Test_LowValueNiche",
+      "company": "Niche Small Op",
+      "score": 3.0,
+      "why": [
+        "company too small (<10 employees)"
+      ]
+    }
+  ],
+  "sample_outreach_messages": [
+    {
+      "lead_id": "L0005",
+      "company": "Hot Lead Corp",
+      "contact": "Test_RecentEngagement",
+      "score": 10.0,
+      "variant": "inbound_followup",
+      "message_source": "llm",
+      "subject": "Your FlowPilot demo for Hot Lead Corp",
+      "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 200 in SaaS, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Hot Lead Corp could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot"
+    },
+    {
+      "lead_id": "L0016",
+      "company": "Week Old Corp",
+      "contact": "Test_WeekOldInteraction",
+      "score": 7.5,
+      "variant": "warm_intro",
+      "message_source": "llm",
+      "subject": "Following up from the webinar",
+      "body": "Hi there,\n\nGreat to connect via the webinar earlier this week. Many Logistics teams like Week Old Corp (a team of about 250) tell us their biggest leak is RFQs and distributor enquiries routed by hand across regions.\n\nOut of curiosity, how does Week Old Corp decide today which inbound leads get a same-day reply? If it's useful, I can share how similar teams use FlowPilot — teams typically cut lead response time from days to minutes.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot"
+    },
+    {
+      "lead_id": "L0011",
+      "company": "Perfect Fit Enterprise",
+      "contact": "Test_HighValueMatch",
+      "score": 9.2,
+      "variant": "inbound_followup",
+      "message_source": "llm",
+      "subject": "Your FlowPilot demo for Perfect Fit Enterprise",
+      "body": "Hi there,\n\nThanks for requesting a demo today. For an organisation of 2,000 people in SaaS, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Perfect Fit Enterprise could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot"
+    },
+    {
+      "lead_id": "L0009",
+      "company": "Active Company",
+      "contact": "Test_MultipleInteractions",
+      "score": 9.0,
+      "variant": "inbound_followup",
+      "message_source": "llm",
+      "subject": "Your FlowPilot demo for Active Company",
+      "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 500 in Finance, the usual bottleneck is high-intent applicants waiting days for a compliant first response, so I'd tailor the demo around how Active Company could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot"
+    },
+    {
+      "lead_id": "L0020",
+      "company": "Average SMB Co",
+      "contact": "Test_SMBAverage",
+      "score": 9.0,
+      "variant": "inbound_followup",
+      "message_source": "llm",
+      "subject": "Your FlowPilot demo for Average SMB Co",
+      "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 120 in Retail, the usual bottleneck is wholesale and partnership enquiries mixed in with customer-service tickets, so I'd tailor the demo around how Average SMB Co could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot"
+    }
+  ],
+  "leads": [
+    {
+      "lead_id": "L0005",
+      "rank": 1,
+      "name": "Test_RecentEngagement",
+      "company": "Hot Lead Corp",
+      "company_size": 200,
+      "industry": "SaaS",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 10.0,
+      "score_range": [
+        10.0,
+        10.0
+      ],
+      "decision": "qualified",
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "200 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 200 employees -> core mid-market (50-1000)",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "QUALIFIED: 10.0 >= 7.5 threshold"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": "Inbound demo request lead from Hot Lead Corp (SaaS); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Hot Lead Corp",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 200 in SaaS, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Hot Lead Corp could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 6
+    },
+    {
+      "lead_id": "L0011",
+      "rank": 2,
+      "name": "Test_HighValueMatch",
+      "company": "Perfect Fit Enterprise",
+      "company_size": 2000,
+      "industry": "SaaS",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 9.2,
+      "score_range": [
+        9.2,
+        9.2
+      ],
+      "decision": "qualified",
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "factor_breakdown": {
+        "size": {
+          "points": 1.75,
+          "max": 2.5,
+          "detail": "2000 employees -> upper mid-market (1001-5000)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +1.75/2.5 — 2000 employees -> upper mid-market (1001-5000)",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "QUALIFIED: 9.2 >= 7.5 threshold"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": "Inbound demo request lead from Perfect Fit Enterprise (SaaS); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Perfect Fit Enterprise",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For an organisation of 2,000 people in SaaS, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Perfect Fit Enterprise could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 12
+    },
+    {
+      "lead_id": "L0009",
+      "rank": 3,
+      "name": "Test_MultipleInteractions",
+      "company": "Active Company",
+      "company_size": 500,
+      "industry": "Finance",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 9.0,
+      "score_range": [
+        9.0,
+        9.0
+      ],
+      "decision": "qualified",
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "500 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Finance' -> adjacent vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 500 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Finance' -> adjacent vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "QUALIFIED: 9.0 >= 7.5 threshold"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": "Inbound demo request lead from Active Company (Finance); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Active Company",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 500 in Finance, the usual bottleneck is high-intent applicants waiting days for a compliant first response, so I'd tailor the demo around how Active Company could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 10
+    },
+    {
+      "lead_id": "L0020",
+      "rank": 4,
+      "name": "Test_SMBAverage",
+      "company": "Average SMB Co",
+      "company_size": 120,
+      "industry": "Retail",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-19",
+      "days_since_last_touch": 1,
+      "score": 9.0,
+      "score_range": [
+        9.0,
+        9.0
+      ],
+      "decision": "qualified",
+      "priority": "P1",
+      "sla": "contact within 24h",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "120 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Retail' -> adjacent vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 1d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 120 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Retail' -> adjacent vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 1d ago -> hot (<=14 days)",
+        "QUALIFIED: 9.0 >= 7.5 threshold"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": "Inbound demo request lead from Average SMB Co (Retail); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Average SMB Co",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For a team of about 120 in Retail, the usual bottleneck is wholesale and partnership enquiries mixed in with customer-service tickets, so I'd tailor the demo around how Average SMB Co could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 21
+    },
+    {
+      "lead_id": "L0002",
+      "rank": 5,
+      "name": "Test_VeryLargeEnterprise",
+      "company": "Global Fortune 500 Corp",
+      "company_size": 50000,
+      "industry": "Enterprise Software",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 8.2,
+      "score_range": [
+        8.2,
+        8.2
+      ],
+      "decision": "qualified",
+      "priority": "P2",
+      "sla": "contact within 3 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 0.75,
+          "max": 2.5,
+          "detail": "50000 employees -> enterprise (5000+), long procurement"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'Enterprise Software' -> core vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +0.75/2.5 — 50000 employees -> enterprise (5000+), long procurement",
+        "industry: +2.5/2.5 — 'Enterprise Software' -> core vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "QUALIFIED: 8.2 >= 7.5 threshold",
+        "AI note (low): very large enterprise: multi-stakeholder, long cycle"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [
+        {
+          "flag": "very large enterprise: multi-stakeholder, long cycle",
+          "severity": "low"
+        }
+      ],
+      "sales_angle": "Inbound demo request lead from Global Fortune 500 Corp (Enterprise Software); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Global Fortune 500 Corp",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For an organisation of 50,000 people in Enterprise Software, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Global Fortune 500 Corp could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 3
+    },
+    {
+      "lead_id": "L0016",
+      "rank": 6,
+      "name": "Test_WeekOldInteraction",
+      "company": "Week Old Corp",
+      "company_size": 250,
+      "industry": "Logistics",
+      "source": "Webinar attendee",
+      "last_interaction_date": "2024-01-13",
+      "days_since_last_touch": 7,
+      "score": 7.5,
+      "score_range": [
+        7.5,
+        7.5
+      ],
+      "decision": "qualified",
+      "priority": "P2",
+      "sla": "contact within 3 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "250 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Logistics' -> adjacent vertical"
+        },
+        "source": {
+          "points": 1.5,
+          "max": 3.0,
+          "detail": "Webinar attendee intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 7d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 250 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Logistics' -> adjacent vertical",
+        "source: +1.5/3 — Webinar attendee intent",
+        "recency: +2/2 — last touch 7d ago -> hot (<=14 days)",
+        "QUALIFIED: 7.5 >= 7.5 threshold"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": "Webinar attendee lead from Week Old Corp (Logistics); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Following up from the webinar",
+        "body": "Hi there,\n\nGreat to connect via the webinar earlier this week. Many Logistics teams like Week Old Corp (a team of about 250) tell us their biggest leak is RFQs and distributor enquiries routed by hand across regions.\n\nOut of curiosity, how does Week Old Corp decide today which inbound leads get a same-day reply? If it's useful, I can share how similar teams use FlowPilot — teams typically cut lead response time from days to minutes.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "warm_intro"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 17
+    },
+    {
+      "lead_id": "L0013",
+      "rank": 7,
+      "name": "Test_MissingName",
+      "company": null,
+      "company_size": 400,
+      "industry": "Consulting",
+      "source": "Sales call",
+      "last_interaction_date": "2024-01-19",
+      "days_since_last_touch": 1,
+      "score": 8.0,
+      "score_range": [
+        8.0,
+        8.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "400 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Consulting' -> adjacent vertical"
+        },
+        "source": {
+          "points": 2.0,
+          "max": 3.0,
+          "detail": "Sales call intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 1d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 400 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Consulting' -> adjacent vertical",
+        "source: +2/3 — Sales call intent",
+        "recency: +2/2 — last touch 1d ago -> hot (<=14 days)",
+        "QUALIFIED: 8.0 >= 7.5 threshold",
+        "REVIEW: scores as qualified but the company is unknown, so fit can't be verified"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "company name missing — verify account before outreach"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Sales call lead from unnamed company (Consulting); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for your team",
+        "body": "Hi there,\n\nThanks for the conversation today. For a team of about 400 in Consulting, the usual bottleneck is referral and inbound enquiries tracked in spreadsheets, so I'd tailor the demo around how your team could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "company missing"
+      ],
+      "source_row": 14
+    },
+    {
+      "lead_id": "L0001",
+      "rank": 8,
+      "name": "Test_MissingSize",
+      "company": "Test Inc",
+      "company_size": null,
+      "industry": "SaaS",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 7.5,
+      "score_range": [
+        7.5,
+        10.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": null,
+          "max": 2.5,
+          "detail": "company size unknown"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: ?/2.5 — company size unknown",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "Missing size cannot change the outcome (range 7.5-10.0)",
+        "QUALIFIED: 7.5 >= 7.5 threshold",
+        "REVIEW: rubric says qualified but the AI raised a red flag — human check before outreach",
+        "AI note (high): company name looks like test/placeholder data"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "AI red flag: company name looks like test/placeholder data"
+      ],
+      "ai_risk_flags": [
+        {
+          "flag": "company name looks like test/placeholder data",
+          "severity": "high"
+        }
+      ],
+      "sales_angle": "Inbound demo request lead from Test Inc (SaaS); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Your FlowPilot demo for Test Inc",
+        "body": "Hi there,\n\nThanks for requesting a demo today. For a growing team in SaaS, the usual bottleneck is trial sign-ups and demo requests going cold before an AE ever replies, so I'd tailor the demo around how Test Inc could route and follow up on those automatically. With FlowPilot, teams typically cut lead response time from days to minutes.\n\nWould Tuesday at 11:00 or Thursday at 15:00 work for a 30-minute walkthrough? Happy to fit around your calendar.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "inbound_followup"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "company_size missing"
+      ],
+      "source_row": 2
+    },
+    {
+      "lead_id": "L0017",
+      "rank": 9,
+      "name": "Test_MidMarketSoft",
+      "company": "Mid Market Software",
+      "company_size": 1500,
+      "industry": "SaaS",
+      "source": "Content download",
+      "last_interaction_date": "2024-01-18",
+      "days_since_last_touch": 2,
+      "score": 7.2,
+      "score_range": [
+        7.2,
+        7.2
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 1.75,
+          "max": 2.5,
+          "detail": "1500 employees -> upper mid-market (1001-5000)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 1.0,
+          "max": 3.0,
+          "detail": "Content download intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 2d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +1.75/2.5 — 1500 employees -> upper mid-market (1001-5000)",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +1/3 — Content download intent",
+        "recency: +2/2 — last touch 2d ago -> hot (<=14 days)",
+        "REVIEW: 7.2 sits in the 6.5-7.4 too-close-to-call band"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "borderline score (6.5-7.4 band)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Content download lead from Mid Market Software (SaaS); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Faster lead follow-up at Mid Market Software",
+        "body": "Hi there,\n\nI noticed Mid Market Software's interest in our work earlier this week. For an organisation of 1,500 people in SaaS, one pattern we see often is trial sign-ups and demo requests going cold before an AE ever replies — and response time is usually the cheapest win available.\n\nFlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for Mid Market Software be useful? No call needed unless it is.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "value_first"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 18
+    },
+    {
+      "lead_id": "L0010",
+      "rank": 10,
+      "name": "Test_NoSourceInfo",
+      "company": "Source Unknown Corp",
+      "company_size": 300,
+      "industry": "Retail",
+      "source": null,
+      "last_interaction_date": "2024-01-18",
+      "days_since_last_touch": 2,
+      "score": 6.0,
+      "score_range": [
+        6.0,
+        9.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "300 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Retail' -> adjacent vertical"
+        },
+        "source": {
+          "points": null,
+          "max": 3.0,
+          "detail": "lead source unknown"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 2d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 300 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Retail' -> adjacent vertical",
+        "source: ?/3 — lead source unknown",
+        "recency: +2/2 — last touch 2d ago -> hot (<=14 days)",
+        "REVIEW: score could be 6.0-9.0 depending on unknown source — needs a human to fill the gap"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "decision depends on missing data (source)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Unknown-source lead from Source Unknown Corp (Retail); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Faster lead follow-up at Source Unknown Corp",
+        "body": "Hi there,\n\nI noticed Source Unknown Corp's interest in our work earlier this week. For a team of about 300 in Retail, one pattern we see often is wholesale and partnership enquiries mixed in with customer-service tickets — and response time is usually the cheapest win available.\n\nFlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for Source Unknown Corp be useful? No call needed unless it is.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "value_first"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "source missing/unknown"
+      ],
+      "source_row": 11
+    },
+    {
+      "lead_id": "L0007",
+      "rank": 11,
+      "name": "Test_UnknownIndustry",
+      "company": "Mysterious Startup",
+      "company_size": 15,
+      "industry": null,
+      "source": "Referral",
+      "last_interaction_date": "2024-01-19",
+      "days_since_last_touch": 1,
+      "score": 5.8,
+      "score_range": [
+        5.8,
+        8.2
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 1.25,
+          "max": 2.5,
+          "detail": "15 employees -> small (10-49)"
+        },
+        "industry": {
+          "points": null,
+          "max": 2.5,
+          "detail": "industry unknown"
+        },
+        "source": {
+          "points": 2.5,
+          "max": 3.0,
+          "detail": "Referral intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 1d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": null,
+      "industry_tier_source": null,
+      "reasoning": [
+        "size: +1.25/2.5 — 15 employees -> small (10-49)",
+        "industry: ?/2.5 — industry unknown",
+        "source: +2.5/3 — Referral intent",
+        "recency: +2/2 — last touch 1d ago -> hot (<=14 days)",
+        "REVIEW: score could be 5.8-8.2 depending on unknown industry — needs a human to fill the gap"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "decision depends on missing data (industry)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Referral lead from Mysterious Startup (industry unknown); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Following up from mutual connection's introduction",
+        "body": "Hi there,\n\nGreat to connect via a mutual connection's introduction today. Many your market teams like Mysterious Startup (a 15-person team) tell us their biggest leak is promising leads waiting too long for a first response.\n\nOut of curiosity, how does Mysterious Startup decide today which inbound leads get a same-day reply? If it's useful, I can share how similar teams use FlowPilot — teams typically cut lead response time from days to minutes.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "warm_intro"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "industry missing/unknown"
+      ],
+      "source_row": 8
+    },
+    {
+      "lead_id": "L0006",
+      "rank": 12,
+      "name": "Test_MissingDate",
+      "company": "Mystery Co",
+      "company_size": 150,
+      "industry": "Technology",
+      "source": null,
+      "last_interaction_date": null,
+      "days_since_last_touch": null,
+      "score": 5.0,
+      "score_range": [
+        5.0,
+        10.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "150 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'Technology' -> core vertical"
+        },
+        "source": {
+          "points": null,
+          "max": 3.0,
+          "detail": "lead source unknown"
+        },
+        "recency": {
+          "points": null,
+          "max": 2.0,
+          "detail": "last interaction date unknown"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 150 employees -> core mid-market (50-1000)",
+        "industry: +2.5/2.5 — 'Technology' -> core vertical",
+        "source: ?/3 — lead source unknown",
+        "recency: ?/2 — last interaction date unknown",
+        "REVIEW: score could be 5.0-10.0 depending on unknown source, recency — needs a human to fill the gap"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "decision depends on missing data (source, recency)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Unknown-source lead from Mystery Co (Technology); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Faster lead follow-up at Mystery Co",
+        "body": "Hi there,\n\nI noticed Mystery Co's interest in our work recently. For a team of about 150 in Technology, one pattern we see often is trial sign-ups and demo requests going cold before an AE ever replies — and response time is usually the cheapest win available.\n\nFlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for Mystery Co be useful? No call needed unless it is.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "value_first"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "source missing/unknown",
+        "last_interaction_date missing"
+      ],
+      "source_row": 7
+    },
+    {
+      "lead_id": "L0015",
+      "rank": 13,
+      "name": "Test_PartialData",
+      "company": "Tech Partial",
+      "company_size": null,
+      "industry": "SaaS",
+      "source": null,
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 4.5,
+      "score_range": [
+        4.5,
+        10.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": null,
+          "max": 2.5,
+          "detail": "company size unknown"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": null,
+          "max": 3.0,
+          "detail": "lead source unknown"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: ?/2.5 — company size unknown",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: ?/3 — lead source unknown",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "REVIEW: score could be 4.5-10.0 depending on unknown size, source — needs a human to fill the gap"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "decision depends on missing data (size, source)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Unknown-source lead from Tech Partial (SaaS); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Faster lead follow-up at Tech Partial",
+        "body": "Hi there,\n\nI noticed Tech Partial's interest in our work today. For a growing team in SaaS, one pattern we see often is trial sign-ups and demo requests going cold before an AE ever replies — and response time is usually the cheapest win available.\n\nFlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for Tech Partial be useful? No call needed unless it is.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "value_first"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "company_size missing",
+        "source missing/unknown"
+      ],
+      "source_row": 16
+    },
+    {
+      "lead_id": "L0014",
+      "rank": 14,
+      "name": "Test_NameOnly",
+      "company": "James Wilson",
+      "company_size": null,
+      "industry": null,
+      "source": null,
+      "last_interaction_date": null,
+      "days_since_last_touch": null,
+      "score": 1.0,
+      "score_range": [
+        1.0,
+        10.0
+      ],
+      "decision": "review",
+      "priority": "P3-review",
+      "sla": "human decision within 2 business days",
+      "factor_breakdown": {
+        "size": {
+          "points": null,
+          "max": 2.5,
+          "detail": "company size unknown"
+        },
+        "industry": {
+          "points": null,
+          "max": 2.5,
+          "detail": "industry unknown"
+        },
+        "source": {
+          "points": null,
+          "max": 3.0,
+          "detail": "lead source unknown"
+        },
+        "recency": {
+          "points": null,
+          "max": 2.0,
+          "detail": "last interaction date unknown"
+        }
+      },
+      "industry_tier": null,
+      "industry_tier_source": null,
+      "reasoning": [
+        "size: ?/2.5 — company size unknown",
+        "industry: ?/2.5 — industry unknown",
+        "source: ?/3 — lead source unknown",
+        "recency: ?/2 — last interaction date unknown",
+        "REVIEW: score could be 1.0-10.0 depending on unknown size, industry, source, recency — needs a human to fill the gap"
+      ],
+      "rejection_reasons": [],
+      "review_reasons": [
+        "decision depends on missing data (size, industry, source, recency)"
+      ],
+      "ai_risk_flags": [],
+      "sales_angle": "Unknown-source lead from James Wilson (industry unknown); lead with response-time pain.",
+      "outreach_message": {
+        "subject": "Faster lead follow-up at James Wilson",
+        "body": "Hi there,\n\nI noticed James Wilson's interest in our work recently. For a growing team in your market, one pattern we see often is promising leads waiting too long for a first response — and response time is usually the cheapest win available.\n\nFlowPilot is a revenue-operations platform that scores, routes and follows up on inbound leads automatically; teams typically cut lead response time from days to minutes. Would a two-page teardown of how that could look for James Wilson be useful? No call needed unless it is.\n\nBest,\nPriya Nair\nAccount Executive, FlowPilot",
+        "variant": "value_first"
+      },
+      "message_source": "llm",
+      "llm_status": "ok",
+      "data_issues": [
+        "company_size missing",
+        "industry missing/unknown",
+        "source missing/unknown",
+        "last_interaction_date missing"
+      ],
+      "source_row": 15
+    },
+    {
+      "lead_id": "L0008",
+      "rank": null,
+      "name": "Test_VeryRecentSignup",
+      "company": "Brand New Startup",
+      "company_size": 2,
+      "industry": "SaaS",
+      "source": "Inbound demo request",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 7.5,
+      "score_range": [
+        7.5,
+        7.5
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 0.0,
+          "max": 2.5,
+          "detail": "2 employees -> micro (<10)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 3.0,
+          "max": 3.0,
+          "detail": "Inbound demo request intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +0/2.5 — 2 employees -> micro (<10)",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +3/3 — Inbound demo request intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "KNOCKOUT: 2 employees is below the 10-person minimum (no RevOps/sales-ops function to buy)"
+      ],
+      "rejection_reasons": [
+        "company too small (<10 employees)"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": null,
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "not_needed",
+      "data_issues": [],
+      "source_row": 9
+    },
+    {
+      "lead_id": "L0019",
+      "rank": null,
+      "name": "Test_GovernmentBuyer",
+      "company": "Government Tech",
+      "company_size": 3000,
+      "industry": "Government",
+      "source": "Sales call",
+      "last_interaction_date": "2024-01-17",
+      "days_since_last_touch": 3,
+      "score": 6.2,
+      "score_range": [
+        6.2,
+        6.2
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 1.75,
+          "max": 2.5,
+          "detail": "3000 employees -> upper mid-market (1001-5000)"
+        },
+        "industry": {
+          "points": 0.5,
+          "max": 2.5,
+          "detail": "'Government' -> low vertical"
+        },
+        "source": {
+          "points": 2.0,
+          "max": 3.0,
+          "detail": "Sales call intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 3d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "low",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +1.75/2.5 — 3000 employees -> upper mid-market (1001-5000)",
+        "industry: +0.5/2.5 — 'Government' -> low vertical",
+        "source: +2/3 — Sales call intent",
+        "recency: +2/2 — last touch 3d ago -> hot (<=14 days)",
+        "REJECTED: 6.2 < 6.5 threshold",
+        "AI note (low): public-sector buyer: expect formal procurement/RFP"
+      ],
+      "rejection_reasons": [
+        "low-fit industry"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [
+        {
+          "flag": "public-sector buyer: expect formal procurement/RFP",
+          "severity": "low"
+        }
+      ],
+      "sales_angle": "Sales call lead from Government Tech (Government); lead with response-time pain.",
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "ok",
+      "data_issues": [],
+      "source_row": 20
+    },
+    {
+      "lead_id": "L0004",
+      "rank": null,
+      "name": "Test_StaleInteraction",
+      "company": "Old Company Inc",
+      "company_size": 100,
+      "industry": "Manufacturing",
+      "source": "Sales call",
+      "last_interaction_date": "2022-06-15",
+      "days_since_last_touch": 584,
+      "score": 6.0,
+      "score_range": [
+        6.0,
+        6.0
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "100 employees -> core mid-market (50-1000)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Manufacturing' -> adjacent vertical"
+        },
+        "source": {
+          "points": 2.0,
+          "max": 3.0,
+          "detail": "Sales call intent"
+        },
+        "recency": {
+          "points": 0.0,
+          "max": 2.0,
+          "detail": "last touch 584d ago -> stale (>1 year)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +2.5/2.5 — 100 employees -> core mid-market (50-1000)",
+        "industry: +1.5/2.5 — 'Manufacturing' -> adjacent vertical",
+        "source: +2/3 — Sales call intent",
+        "recency: +0/2 — last touch 584d ago -> stale (>1 year)",
+        "KNOCKOUT: last interaction 584 days ago — route to re-engagement nurture, not sales"
+      ],
+      "rejection_reasons": [
+        "stale engagement (>1 year)"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": null,
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "not_needed",
+      "data_issues": [],
+      "source_row": 5
+    },
+    {
+      "lead_id": "L0018",
+      "rank": null,
+      "name": "Test_StartupShutdown",
+      "company": "Failed Startup",
+      "company_size": 8,
+      "industry": "SaaS",
+      "source": "Referral",
+      "last_interaction_date": "2023-05-01",
+      "days_since_last_touch": 264,
+      "score": 5.0,
+      "score_range": [
+        5.0,
+        5.0
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 0.0,
+          "max": 2.5,
+          "detail": "8 employees -> micro (<10)"
+        },
+        "industry": {
+          "points": 2.5,
+          "max": 2.5,
+          "detail": "'SaaS' -> core vertical"
+        },
+        "source": {
+          "points": 2.5,
+          "max": 3.0,
+          "detail": "Referral intent"
+        },
+        "recency": {
+          "points": 0.0,
+          "max": 2.0,
+          "detail": "last touch 264d ago -> dormant (121-365 days)"
+        }
+      },
+      "industry_tier": "core",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +0/2.5 — 8 employees -> micro (<10)",
+        "industry: +2.5/2.5 — 'SaaS' -> core vertical",
+        "source: +2.5/3 — Referral intent",
+        "recency: +0/2 — last touch 264d ago -> dormant (121-365 days)",
+        "KNOCKOUT: 8 employees is below the 10-person minimum (no RevOps/sales-ops function to buy)"
+      ],
+      "rejection_reasons": [
+        "company too small (<10 employees)"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": null,
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "not_needed",
+      "data_issues": [],
+      "source_row": 19
+    },
+    {
+      "lead_id": "L0003",
+      "rank": null,
+      "name": "Test_Solo",
+      "company": "John Doe Consulting",
+      "company_size": 1,
+      "industry": "Consulting",
+      "source": "LinkedIn outreach",
+      "last_interaction_date": "2024-01-20",
+      "days_since_last_touch": 0,
+      "score": 4.0,
+      "score_range": [
+        4.0,
+        4.0
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 0.0,
+          "max": 2.5,
+          "detail": "1 employees -> micro (<10)"
+        },
+        "industry": {
+          "points": 1.5,
+          "max": 2.5,
+          "detail": "'Consulting' -> adjacent vertical"
+        },
+        "source": {
+          "points": 0.5,
+          "max": 3.0,
+          "detail": "LinkedIn outreach intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 0d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "adjacent",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +0/2.5 — 1 employees -> micro (<10)",
+        "industry: +1.5/2.5 — 'Consulting' -> adjacent vertical",
+        "source: +0.5/3 — LinkedIn outreach intent",
+        "recency: +2/2 — last touch 0d ago -> hot (<=14 days)",
+        "KNOCKOUT: 1 employees is below the 10-person minimum (no RevOps/sales-ops function to buy)"
+      ],
+      "rejection_reasons": [
+        "company too small (<10 employees)"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": null,
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "not_needed",
+      "data_issues": [],
+      "source_row": 4
+    },
+    {
+      "lead_id": "L0012",
+      "rank": null,
+      "name": "Test_LowValueNiche",
+      "company": "Niche Small Op",
+      "company_size": 5,
+      "industry": "Agriculture",
+      "source": "LinkedIn outreach",
+      "last_interaction_date": "2024-01-15",
+      "days_since_last_touch": 5,
+      "score": 3.0,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "decision": "rejected",
+      "priority": "—",
+      "sla": "no sales outreach",
+      "factor_breakdown": {
+        "size": {
+          "points": 0.0,
+          "max": 2.5,
+          "detail": "5 employees -> micro (<10)"
+        },
+        "industry": {
+          "points": 0.5,
+          "max": 2.5,
+          "detail": "'Agriculture' -> low vertical"
+        },
+        "source": {
+          "points": 0.5,
+          "max": 3.0,
+          "detail": "LinkedIn outreach intent"
+        },
+        "recency": {
+          "points": 2.0,
+          "max": 2.0,
+          "detail": "last touch 5d ago -> hot (<=14 days)"
+        }
+      },
+      "industry_tier": "low",
+      "industry_tier_source": "rubric",
+      "reasoning": [
+        "size: +0/2.5 — 5 employees -> micro (<10)",
+        "industry: +0.5/2.5 — 'Agriculture' -> low vertical",
+        "source: +0.5/3 — LinkedIn outreach intent",
+        "recency: +2/2 — last touch 5d ago -> hot (<=14 days)",
+        "KNOCKOUT: 5 employees is below the 10-person minimum (no RevOps/sales-ops function to buy)"
+      ],
+      "rejection_reasons": [
+        "company too small (<10 employees)"
+      ],
+      "review_reasons": [],
+      "ai_risk_flags": [],
+      "sales_angle": null,
+      "outreach_message": null,
+      "message_source": null,
+      "llm_status": "not_needed",
+      "data_issues": [],
+      "source_row": 13
+    }
+  ]
+}
